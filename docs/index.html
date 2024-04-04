@@ -25,6 +25,10 @@
                                 <span class="icon-delivery"></span>
                                 <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, porro.</span>
                             </div>
+                            <a href="#" class="header__location" data-popup="location">
+                                <span class="icon-location"></span>
+                                <span>Madrid</span>
+                            </a>
                             <a href="tel:+123456789" class="header__phone">
                                 <span class="icon-phone"></span>
                                 <span>+1 (234) 567 89</span>
@@ -33,49 +37,20 @@
                                 <span class="icon-mail"></span>
                                 <span>mail@test.com</span>
                             </a>
-                            <div class="header__location header-location">
-                                <span class="icon-location"></span>
-                                <span class="header-location__selected">Madrid</span>
-                                <span class="icon-arrow"></span>
-                                <form class="header-location__dropdown">
-                                    <div class="header-location__search">
-                                        <span class="icon-search"></span>
-                                        <input type="text" placeholder="Search your city...">
-                                    </div>
-                                    <ul class="header-location__list">
-                                        <li class="header-location__item"><button>Madrid</button></li>
-                                        <li class="header-location__item"><button>Barcelona</button></li>
-                                        <li class="header-location__item"><button>Valencia</button></li>
-                                        <li class="header-location__item"><button>Seville</button></li>
-                                        <li class="header-location__item"><button>Bilbao</button></li>
-                                        <li class="header-location__item"><button>Málaga</button></li>
-                                        <li class="header-location__item"><button>Asturias</button></li>
-                                        <li class="header-location__item"><button>Alicante</button></li>
-                                        <li class="header-location__item"><button>Las Palmas</button></li>
-                                        <li class="header-location__item"><button>Zaragoza</button></li>
-                                        <li class="header-location__item"><button>Murcia</button></li>
-                                        <li class="header-location__item"><button>Santa Cruz de Tenerife</button></li>
-                                        <li class="header-location__item"><button>Granada</button></li>
-                                        <li class="header-location__item"><button>Palma de Mallorca</button></li>
-                                    </ul>
-                                </form>
-                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="header__mobile">
                     <div class="container">
                         <div class="header__mobile-inner">
-                            <button class="header__burger">
+                            <button class="header__burger" data-mobile>
                                 <span class="icon-burger"></span>
-                                <span>Menu</span>
                             </button>
                             <div class="header__logo">
                                 <a href="/index.html"><img src="img/logo.svg" alt="logo image" loading="lazy" width="150" height="50"></a>
                             </div>
-                            <button class="header__search">
+                            <button class="header__search" data-search>
                                 <span class="icon-search"></span>
-                                <span>Search</span>
                             </button>
                         </div>
                     </div>
@@ -89,12 +64,69 @@
                             <form class="header__form header-form">
                                 <div class="header-form__search">
                                     <button class="icon-search"></button>
-                                    <input type="text" placeholder="Search for...">
+                                    <input name="s" type="text" placeholder="Search for...">
                                 </div>
+                                <ul class="header-form__list search-list">
+                                    <li class="search-list__item">
+                                        <a href="#" class="search-list__item-inner">
+                                            <div class="search-list__image"><img src="img/products/default.webp" alt="image default"></div>
+                                            <div data-title="Name:" class="search-list__name">Super Avana</div>
+                                            <div data-title="Price:" class="search-list__price">100.87</div>
+                                            <div class="search-list__button"><span>Buy</span></div>
+                                        </a>
+                                    </li>
+                                    <li class="search-list__item">
+                                        <a href="#" class="search-list__item-inner">
+                                            <div class="search-list__image"><img src="img/products/default.webp" alt="image default"></div>
+                                            <div data-title="Name:" class="search-list__name">Super Avana</div>
+                                            <div data-title="Price:" class="search-list__price">100.87</div>
+                                            <div class="search-list__button"><span>Buy</span></div>
+                                        </a>
+                                    </li>
+                                    <li class="search-list__item">
+                                        <a href="#" class="search-list__item-inner">
+                                            <div class="search-list__image"><img src="img/products/default.webp" alt="image default"></div>
+                                            <div data-title="Name:" class="search-list__name">Super Avana</div>
+                                            <div data-title="Price:" class="search-list__price">100.87</div>
+                                            <div class="search-list__button"><span>Buy</span></div>
+                                        </a>
+                                    </li>
+                                    <li class="search-list__item">
+                                        <a href="#" class="search-list__item-inner">
+                                            <div class="search-list__image"><img src="img/products/default.webp" alt="image default"></div>
+                                            <div data-title="Name:" class="search-list__name">Super Avana</div>
+                                            <div data-title="Price:" class="search-list__price">100.87</div>
+                                            <div class="search-list__button"><span>Buy</span></div>
+                                        </a>
+                                    </li>
+                                    <li class="search-list__item">
+                                        <a href="#" class="search-list__item-inner">
+                                            <div class="search-list__image"><img src="img/products/default.webp" alt="image default"></div>
+                                            <div data-title="Name:" class="search-list__name">Super Avana</div>
+                                            <div data-title="Price:" class="search-list__price">100.87</div>
+                                            <div class="search-list__button"><span>Buy</span></div>
+                                        </a>
+                                    </li>
+                                    <li class="search-list__item">
+                                        <a href="#" class="search-list__item-inner">
+                                            <div class="search-list__image"><img src="img/products/default.webp" alt="image default"></div>
+                                            <div data-title="Name:" class="search-list__name">Super Avana</div>
+                                            <div data-title="Price:" class="search-list__price">100.87</div>
+                                            <div class="search-list__button"><span>Buy</span></div>
+                                        </a>
+                                    </li>
+                                    <li class="search-list__item">
+                                        <a href="#" class="search-list__item-inner">
+                                            <div class="search-list__image"><img src="img/products/default.webp" alt="image default"></div>
+                                            <div data-title="Name:" class="search-list__name">Super Avana</div>
+                                            <div data-title="Price:" class="search-list__price">100.87</div>
+                                            <div class="search-list__button"><span>Buy</span></div>
+                                        </a>
+                                    </li>
+                                </ul>
                             </form>
                             <a href="#" class="header__saved">
                                 <span class="icon-heart" data-count="1"></span>
-                                <span>Saved</span>
                             </a>
                         </div>
                     </div>
@@ -166,107 +198,92 @@
                     <div class="mobile-menu__content">
                         <nav class="mobile-menu__nav">
                             <ul class="menu">
+                                <li class="menu-item" data-popup="location"><a href="#"><span class="icon-location"></span><span>Location</span><span class="icon-arrow"></span></a></li>
+                                <li class="menu-item"><a href="#"><span class="icon-heart"></span><span>Saved</span></a></li>
+                            </ul>
+                            <ul class="menu">
                                 <li class="menu-item">
-                                    <a href="#"><span>Categories</span><span class="icon-arrow"></span></a>
+                                    <a href="#"><span class="icon-category"></span><span>Categories</span><span class="icon-arrow"></span></a>
                                     <div class="sub-menu">
-                                        <div class="top">
+                                        <div class="sub-menu__top">
                                             <button class="back"><span class="icon-arrow"></span><span class="caption">Categories</span></button>
                                             <button class="close"><span class="icon-close"></span></button>
                                         </div>
-                                        <ul class="menu">
-                                            <li class="menu-item"><a href="/antibiotics">antibiotics</a></li>
-                                            <li class="menu-item"><a href="/bestsellers">bestsellers</a></li>
-                                            <li class="menu-item"><a href="/mens-health">mens-health</a></li>
-                                            <li class="menu-item"><a href="/erectile-dysfunction">erectile-dysfunction</a></li>
-                                            <li class="menu-item"><a href="/alcoholism">alcoholism</a></li>
-                                            <li class="menu-item"><a href="/skin-care">skin-care</a></li>
-                                            <li class="menu-item"><a href="/alzheimers-and-parkinsons">alzheimers-and-parkinsons</a></li>
-                                            <li class="menu-item"><a href="/hypertension">hypertension</a></li>
-                                            <li class="menu-item"><a href="/cardiovascular-diseases">cardiovascular-diseases</a></li>
-                                            <li class="menu-item"><a href="/respiratory-tract">respiratory-tract</a></li>
-                                            <li class="menu-item"><a href="/asthma">asthma</a></li>
-                                            <li class="menu-item"><a href="/arthritis">arthritis</a></li>
-                                            <li class="menu-item"><a href="/surgery">surgery</a></li>
-                                            <li class="menu-item"><a href="/migraine">migraine</a></li>
-                                            <li class="menu-item"><a href="/muscle-relaxants">muscle-relaxants</a></li>
-                                            <li class="menu-item"><a href="/womens-health">womens-health</a></li>
-                                            <li class="menu-item"><a href="/brands">brands</a></li>
-                                            <li class="menu-item"><a href="/antifungals">antifungals</a></li>
-                                            <li class="menu-item"><a href="/urinary-tract">urinary-tract</a></li>
-                                            <li class="menu-item"><a href="/mental-disorders">mental-disorders</a></li>
-                                            <li class="menu-item"><a href="/neurological-disorders">neurological-disorders</a></li>
-                                            <li class="menu-item"><a href="/cancer">cancer</a></li>
-                                            <li class="menu-item"><a href="/diabetes">diabetes</a></li>
-                                            <li class="menu-item"><a href="/antiallergic">antiallergic</a></li>
-                                            <li class="menu-item"><a href="/osteoporosis">osteoporosis</a></li>
-                                            <li class="menu-item"><a href="/anti-inflammatories">anti-inflammatories</a></li>
-                                            <li class="menu-item"><a href="/antiparasitic">antiparasitic</a></li>
-                                            <li class="menu-item"><a href="/gastrointestinal-tract">gastrointestinal-tract</a></li>
-                                            <li class="menu-item"><a href="/birth-control">birth-control</a></li>
-                                            <li class="menu-item"><a href="/cholesterol">cholesterol</a></li>
-                                            <li class="menu-item"><a href="/antidepressants">antidepressants</a></li>
-                                            <li class="menu-item"><a href="/antivirals">antivirals</a></li>
-                                            <li class="menu-item"><a href="/hiv">hiv</a></li>
-                                            <li class="menu-item"><a href="/stop-smoking">stop-smoking</a></li>
-                                            <li class="menu-item"><a href="/anticonvulsants">anticonvulsants</a></li>
-                                            <li class="menu-item"><a href="/eye-care">eye-care</a></li>
-                                            <li class="menu-item"><a href="/obesity">obesity</a></li>
-                                            <li class="menu-item"><a href="/analgesics">analgesics</a></li>
-                                            <li class="menu-item"><a href="/vitamins-supplements">vitamins-supplements</a></li>
-                                        </ul>
+                                        <div class="sub-menu__content">
+                                            <ul class="menu">
+                                                <li class="menu-item"><a href="/antibiotics">antibiotics</a></li>
+                                                <li class="menu-item"><a href="/bestsellers">bestsellers</a></li>
+                                                <li class="menu-item"><a href="/mens-health">mens-health</a></li>
+                                                <li class="menu-item"><a href="/erectile-dysfunction">erectile-dysfunction</a></li>
+                                                <li class="menu-item"><a href="/alcoholism">alcoholism</a></li>
+                                                <li class="menu-item"><a href="/skin-care">skin-care</a></li>
+                                                <li class="menu-item"><a href="/alzheimers-and-parkinsons">alzheimers-and-parkinsons</a></li>
+                                                <li class="menu-item"><a href="/hypertension">hypertension</a></li>
+                                                <li class="menu-item"><a href="/cardiovascular-diseases">cardiovascular-diseases</a></li>
+                                                <li class="menu-item"><a href="/respiratory-tract">respiratory-tract</a></li>
+                                                <li class="menu-item"><a href="/asthma">asthma</a></li>
+                                                <li class="menu-item"><a href="/arthritis">arthritis</a></li>
+                                                <li class="menu-item"><a href="/surgery">surgery</a></li>
+                                                <li class="menu-item"><a href="/migraine">migraine</a></li>
+                                                <li class="menu-item"><a href="/muscle-relaxants">muscle-relaxants</a></li>
+                                                <li class="menu-item"><a href="/womens-health">womens-health</a></li>
+                                                <li class="menu-item"><a href="/brands">brands</a></li>
+                                                <li class="menu-item"><a href="/antifungals">antifungals</a></li>
+                                                <li class="menu-item"><a href="/urinary-tract">urinary-tract</a></li>
+                                                <li class="menu-item"><a href="/mental-disorders">mental-disorders</a></li>
+                                                <li class="menu-item"><a href="/neurological-disorders">neurological-disorders</a></li>
+                                                <li class="menu-item"><a href="/cancer">cancer</a></li>
+                                                <li class="menu-item"><a href="/diabetes">diabetes</a></li>
+                                                <li class="menu-item"><a href="/antiallergic">antiallergic</a></li>
+                                                <li class="menu-item"><a href="/osteoporosis">osteoporosis</a></li>
+                                                <li class="menu-item"><a href="/anti-inflammatories">anti-inflammatories</a></li>
+                                                <li class="menu-item"><a href="/antiparasitic">antiparasitic</a></li>
+                                                <li class="menu-item"><a href="/gastrointestinal-tract">gastrointestinal-tract</a></li>
+                                                <li class="menu-item"><a href="/birth-control">birth-control</a></li>
+                                                <li class="menu-item"><a href="/cholesterol">cholesterol</a></li>
+                                                <li class="menu-item"><a href="/antidepressants">antidepressants</a></li>
+                                                <li class="menu-item"><a href="/antivirals">antivirals</a></li>
+                                                <li class="menu-item"><a href="/hiv">hiv</a></li>
+                                                <li class="menu-item"><a href="/stop-smoking">stop-smoking</a></li>
+                                                <li class="menu-item"><a href="/anticonvulsants">anticonvulsants</a></li>
+                                                <li class="menu-item"><a href="/eye-care">eye-care</a></li>
+                                                <li class="menu-item"><a href="/obesity">obesity</a></li>
+                                                <li class="menu-item"><a href="/analgesics">analgesics</a></li>
+                                                <li class="menu-item"><a href="/vitamins-supplements">vitamins-supplements</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </li>
-                                <li class="menu-item"><a href="#">Payment and guarantees</a></li>
-                                <li class="menu-item"><a href="#">About us</a></li>
-                                <li class="menu-item"><a href="#">Contacts</a></li>
-                                <li class="menu-item"><a href="#">FAQ</a></li>
-                                <li class="menu-item"><a href="#">Blog</a></li>
+                                <li class="menu-item"><a href="#"><span class="icon-payment"></span><span>Payment and guarantees</span></a></li>
+                                <li class="menu-item"><a href="#"><span class="icon-about"></span><span>About us</span></a></li>
+                                <li class="menu-item"><a href="#"><span class="icon-mail"></span><span>Contacts</span></a></li>
+                                <li class="menu-item"><a href="#"><span class="icon-faq"></span><span>FAQ</span></a></li>
+                                <li class="menu-item"><a href="#"><span class="icon-blog"></span><span>Blog</span></a></li>
+                                <li class="menu-item">
+                                    <a href="#"><span class="icon-info"></span><span>Info</span><span class="icon-arrow"></span></a>
+                                    <div class="sub-menu">
+                                        <div class="sub-menu__top">
+                                            <button class="back"><span class="icon-arrow"></span><span class="caption">Info</span></button>
+                                            <button class="close"><span class="icon-close"></span></button>
+                                        </div>
+                                        <div class="sub-menu__content">
+                                            <div class="row">
+                                                <span class="icon-delivery"></span>
+                                                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, porro.</span>
+                                            </div>
+                                            <a href="tel:+123456789" class="row">
+                                                <span class="icon-phone"></span>
+                                                <span>+1 (234) 567 89</span>
+                                            </a>
+                                            <a href="mailto:mail@test.com" class="row">
+                                                <span class="icon-mail"></span>
+                                                <span>mail@test.com</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </nav>
-                        <a href="#" class="mobile-menu__saved">
-                            <span class="icon-heart" data-count="1"></span>
-                            <span>Saved</span>
-                        </a>
-                        <div class="mobile-menu__delivery">
-                            <span class="icon-delivery"></span>
-                            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, porro.</span>
-                        </div>
-                        <div class="mobile-menu__row">
-                            <a href="tel:+123456789" class="mobile-menu__phone">
-                                <span class="icon-phone"></span>
-                                <span>+1 (234) 567 89</span>
-                            </a>
-                            <a href="mailto:mail@test.com" class="mobile-menu__mail">
-                                <span class="icon-mail"></span>
-                                <span>mail@test.com</span>
-                            </a>
-                        </div>
-                        <div class="mobile-menu__location mobile-menu-location">
-                            <span class="icon-location"></span>
-                            <span class="mobile-menu-location__selected">Madrid</span>
-                            <form class="mobile-menu-location__dropdown">
-                                <div class="mobile-menu-location__search">
-                                    <span class="icon-search"></span>
-                                    <input type="text" placeholder="Search your city...">
-                                </div>
-                                <ul class="mobile-menu-location__list">
-                                    <li class="mobile-menu-location__item"><button>Madrid</button></li>
-                                    <li class="mobile-menu-location__item"><button>Barcelona</button></li>
-                                    <li class="mobile-menu-location__item"><button>Valencia</button></li>
-                                    <li class="mobile-menu-location__item"><button>Seville</button></li>
-                                    <li class="mobile-menu-location__item"><button>Bilbao</button></li>
-                                    <li class="mobile-menu-location__item"><button>Málaga</button></li>
-                                    <li class="mobile-menu-location__item"><button>Asturias</button></li>
-                                    <li class="mobile-menu-location__item"><button>Alicante</button></li>
-                                    <li class="mobile-menu-location__item"><button>Las Palmas</button></li>
-                                    <li class="mobile-menu-location__item"><button>Zaragoza</button></li>
-                                    <li class="mobile-menu-location__item"><button>Murcia</button></li>
-                                    <li class="mobile-menu-location__item"><button>Santa Cruz de Tenerife</button></li>
-                                    <li class="mobile-menu-location__item"><button>Granada</button></li>
-                                    <li class="mobile-menu-location__item"><button>Palma de Mallorca</button></li>
-                                </ul>
-                            </form>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -277,6 +294,50 @@
         <footer class="footer">
 
         </footer>
+        <section class="popup">
+            <div class="popup__inner">
+                <div class="popup__head"><button class="close"><span class="icon-close"></span></button></div>
+                <div class="popup__content location">
+                    <div class="location__inner">
+                        <h2 class="location__title">Choose the city</h2>
+                        <div class="location__detect">
+                            <button class="detect-city">Detect your city</button> <span>by GPS</span>
+                        </div>
+                        <form class="location__form location-form">
+                            <div class="location-form__search">
+                                <button class="icon-search"></button>
+                                <input type="text" placeholder="Search your city...">
+                            </div>
+                        </form>
+                        <ul class="location__list">
+                            <li><button>Madrid</button></li>
+                            <li><button>Barcelona</button></li>
+                            <li><button>Valencia</button></li>
+                            <li><button>Seville</button></li>
+                            <li><button>Bilbao</button></li>
+                            <li><button>Málaga</button></li>
+                            <li><button>Asturias</button></li>
+                            <li><button>Alicante</button></li>
+                            <li><button>Las Palmas</button></li>
+                            <li><button>Zaragoza</button></li>
+                            <li><button>Murcia</button></li>
+                            <li><button>Santa Cruz de Tenerife</button></li>
+                            <li><button>Granada</button></li>
+                            <li><button>Palma de Mallorca</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup__content other">
+                    <div class="other__inner">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat ullam, dolorem itaque optio molestiae possimus officia sunt, sint quae excepturi quidem necessitatibus repudiandae iste facere obcaecati hic fugit est nostrum.</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat ullam, dolorem itaque optio molestiae possimus officia sunt, sint quae excepturi quidem necessitatibus repudiandae iste facere obcaecati hic fugit est nostrum.</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat ullam, dolorem itaque optio molestiae possimus officia sunt, sint quae excepturi quidem necessitatibus repudiandae iste facere obcaecati hic fugit est nostrum.</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat ullam, dolorem itaque optio molestiae possimus officia sunt, sint quae excepturi quidem necessitatibus repudiandae iste facere obcaecati hic fugit est nostrum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="blur"></div>
     </div>
 </body>
 
