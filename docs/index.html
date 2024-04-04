@@ -25,7 +25,7 @@
                                 <span class="icon-delivery"></span>
                                 <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, porro.</span>
                             </div>
-                            <a href="#" class="header__location" data-popup="location">
+                            <a href="#" class="header__location" data-popup="location|Choose the city">
                                 <span class="icon-location"></span>
                                 <span>Madrid</span>
                             </a>
@@ -198,7 +198,7 @@
                     <div class="mobile-menu__content">
                         <nav class="mobile-menu__nav">
                             <ul class="menu">
-                                <li class="menu-item" data-popup="location"><a href="#"><span class="icon-location"></span><span>Location</span><span class="icon-arrow"></span></a></li>
+                                <li class="menu-item" data-popup="location|Choose the city"><a href="#"><span class="icon-location"></span><span>Location</span><span class="icon-arrow"></span></a></li>
                                 <li class="menu-item"><a href="#"><span class="icon-heart"></span><span>Saved</span></a></li>
                             </ul>
                             <ul class="menu">
@@ -296,10 +296,12 @@
         </footer>
         <section class="popup">
             <div class="popup__inner">
-                <div class="popup__head"><button class="close"><span class="icon-close"></span></button></div>
+                <div class="popup__head">
+                    <div class="title">Choose the city</div>
+                    <button class="close"><span class="icon-close"></span></button>
+                </div>
                 <div class="popup__content location">
                     <div class="location__inner">
-                        <h2 class="location__title">Choose the city</h2>
                         <div class="location__detect">
                             <button class="detect-city">Detect your city</button> <span>by GPS</span>
                         </div>
@@ -325,14 +327,6 @@
                             <li><button>Granada</button></li>
                             <li><button>Palma de Mallorca</button></li>
                         </ul>
-                    </div>
-                </div>
-                <div class="popup__content other">
-                    <div class="other__inner">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat ullam, dolorem itaque optio molestiae possimus officia sunt, sint quae excepturi quidem necessitatibus repudiandae iste facere obcaecati hic fugit est nostrum.</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat ullam, dolorem itaque optio molestiae possimus officia sunt, sint quae excepturi quidem necessitatibus repudiandae iste facere obcaecati hic fugit est nostrum.</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat ullam, dolorem itaque optio molestiae possimus officia sunt, sint quae excepturi quidem necessitatibus repudiandae iste facere obcaecati hic fugit est nostrum.</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat ullam, dolorem itaque optio molestiae possimus officia sunt, sint quae excepturi quidem necessitatibus repudiandae iste facere obcaecati hic fugit est nostrum.</p>
                     </div>
                 </div>
             </div>

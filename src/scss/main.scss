@@ -1126,8 +1126,15 @@ body {
     }
     &__head {
         display: flex;
+        align-items: center;
         padding: 10px;
         border-bottom: 1px solid #eaeaea;
+    }
+    &__head .title {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1.2;
+        padding-left: 10px;
     }
     &__head .close {
         background: none;
@@ -1160,11 +1167,6 @@ body {
 .location {
     &__inner {
         padding: 20px;
-    }
-    &__title {
-        font-size: 28px;
-        line-height: 1.2;
-        margin-bottom: 15px;
     }
     &__detect {
         font-size: 16px;
@@ -1265,6 +1267,10 @@ body {
     .popup {
         padding: 0;
 
+        &__head .title {
+            font-size: 24px;
+            padding-left: 5px;
+        }
         &__inner {
             max-width: 100%;
             max-height: 100%;
@@ -1277,9 +1283,6 @@ body {
     .location {
         &__inner {
             padding: 15px;
-        }
-        &__title {
-            font-size: 24px;
         }
     }
 }

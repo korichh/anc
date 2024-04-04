@@ -34,8 +34,10 @@
             if (e.target.closest('[data-popup]')) {
                 e.preventDefault()
                 dataPopup = e.target.closest('[data-popup]').getAttribute('data-popup')
+                const [selector, title] = dataPopup.split('|')
                 popup.classList.add('_active')
-                popup.querySelector(`.${dataPopup}`).classList.add('_active')
+                popup.querySelector('.title').innerHTML = escapeHtml(title) || ''
+                popup.querySelector(`.${escapeHtml(selector)}`).classList.add('_active')
             }
         })
 
@@ -67,7 +69,8 @@
                 if (searchTimeout) clearTimeout(searchTimeout)
 
                 searchTimeout = setTimeout(async () => {
-                    const raw = await fetch('../search.json')
+                    const s = headerForm.s.value
+                    const raw = await fetch(`../search.json?s=${escapeHtml(s)}`)
                     const data = await raw.json()
                     const itemsHTML = getItemsHTML(data)
                     headerForm.querySelector('.search-list').innerHTML = itemsHTML
@@ -99,5 +102,14 @@
                 document.querySelector('.blur').classList.add('_active')
             }
         })
+    }
+
+    function escapeHtml(html) {
+        return html
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
     }
 })()
