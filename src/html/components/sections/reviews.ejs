@@ -1,0 +1,32 @@
+<section class="reviews">
+    <div class="container">
+        <div class="reviews__inner">
+            <div class="reviews__content">
+                <h2 class="title_prim">Reviews</h2>
+            </div>
+            <ul class="reviews__list">
+                <% if (!locals.count) locals.count = 6 %>
+                <% for (let i = 0; i < locals.count; i++) { %>
+                <li class="reviews__item review-card" itemscope="" itemtype="https://schema.org/Review">
+                    <meta itemprop="datePublished" content="2024-04-05">
+                    <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
+                    <meta itemprop="name" content="{$host}">
+                    <meta itemprop="itemreviewed" content="{$host}">
+                    <div class="review-card__inner">
+                        <div class="review-card__top">
+                            <div class="review-card__image"><img src="img/review/default.webp" alt="image default" loading="lazy" width="100" height="100"></div>
+                            <div class="review-card__author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+                                <h3 itemprop="name">Lorem, ipsum</h3>
+                            </div>
+                        </div>
+                        <div class="review-card__bottom" itemprop="reviewBody">
+                            <h3>Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi odit animi saepe magni aspernatur! Quo voluptatum aut tempore harum deserunt doloribus, distinctio nemo amet ea? Minima fugiat illum dolorem ipsum.</p>
+                        </div>
+                    </div>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</section>

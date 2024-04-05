@@ -1,8 +1,19 @@
 (function () {
+    const header = document.querySelector('.header')
     const mobileMenu = document.querySelector('.mobile-menu')
     const popup = document.querySelector('.popup')
     const headerForm = document.querySelector('.header-form')
     const headerMiddle = document.querySelector('.header__middle')
+
+    if (header) {
+        document.addEventListener('scroll', checkScroll)
+        checkScroll()
+
+        function checkScroll() {
+            if (scrollY > 40) header.classList.add('_active')
+            else header.classList.remove('_active')
+        }
+    }
 
     if (mobileMenu) {
         document.addEventListener('click', (e) => {
@@ -49,7 +60,7 @@
         })
     }
 
-    if (headerForm) {
+    if (headerMiddle && headerForm) {
         document.addEventListener('click', (e) => {
             if (e.target.closest('.header-form__search')) {
                 headerForm.classList.add('_active')
@@ -58,6 +69,13 @@
                 headerMiddle.classList.remove('_active')
                 headerForm.classList.remove('_active')
                 document.querySelector('.blur').classList.remove('_active')
+            }
+
+            if (e.target.closest('[data-search]')) {
+                headerMiddle.classList.add('_active')
+                headerMiddle.querySelector('.header-form__search input').focus()
+                headerForm.classList.add('_active')
+                document.querySelector('.blur').classList.add('_active')
             }
         })
 
@@ -91,17 +109,6 @@
                 </li>`
             }, '')
         }
-    }
-
-    if (headerMiddle) {
-        document.addEventListener('click', (e) => {
-            if (e.target.closest('[data-search]')) {
-                headerMiddle.classList.add('_active')
-                headerMiddle.querySelector('.header-form__search input').focus()
-                headerForm.classList.add('_active')
-                document.querySelector('.blur').classList.add('_active')
-            }
-        })
     }
 
     function escapeHtml(html) {
