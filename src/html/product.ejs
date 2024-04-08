@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('./components/root/head.ejs', { title: 'Product' }) %>
+
+<body>
+    <div class="page">
+        <%- include('./components/root/header.ejs') %>
+        <main class="main">
+            <%- include('./components/sections/breadcrumbs.ejs', { crumbs: ['Home', 'Category', 'Product'] }) %>
+            <%- include('./components/sections/product.ejs') %>
+        </main>
+        <%- include('./components/root/footer.ejs') %>
+        <%- include('./components/root/popup.ejs') %>
+        <%- include('./components/root/scroll-top.ejs') %>
+    </div>
+</body>
+
+</html>

@@ -2,15 +2,44 @@
     <div class="container">
         <div class="products__inner">
             <div class="products__content">
+                <% if (locals.page == 'category') { %>
+                <h1 class="title_prim">Category</h1>
+                <div class="products__filter products-filter">
+                    <div class="products-filter__sort">
+                        <div class="products-filter__row">
+                            <span>Sort by price:</span>
+                            <button class="products-filter__toggle">
+                                <div class="products-filter__toggle-open"><span class="icon-asc"></span><span>Ascending</span></div>
+                                <div class="products-filter__toggle-close"><span class="icon-desc"></span><span>Descending</span></div>
+                            </button>
+                        </div>
+                        <div class="products-filter__row">
+                            <span>Sort by discount:</span>
+                            <button class="products-filter__toggle">
+                                <div class="products-filter__toggle-open"><span class="icon-asc"></span><span>Ascending</span></div>
+                                <div class="products-filter__toggle-close"><span class="icon-desc"></span><span>Descending</span></div>
+                            </button>
+                        </div>
+                        <div class="products-filter__row">
+                            <span>Sort by rating:</span>
+                            <button class="products-filter__toggle">
+                                <div class="products-filter__toggle-open"><span class="icon-asc"></span><span>Ascending</span></div>
+                                <div class="products-filter__toggle-close"><span class="icon-desc"></span><span>Descending</span></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <% } else { %>
                 <h2 class="title_prim">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
                 <p class="text_prim">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias dolorem vel recusandae. Expedita rerum voluptates assumenda sed doloremque laudantium, ad repudiandae optio rem suscipit in nobis necessitatibus sint! Suscipit nostrum, dolores, totam voluptatum tenetur dicta aliquid est architecto minima molestiae, cupiditate amet? Sunt ut possimus unde velit ipsam porro. Distinctio similique labore eos ipsum nostrum ipsa praesentium, impedit ipsam eum. Itaque magnam repellendus iste omnis voluptates fugiat error ducimus nemo harum recusandae. Iusto voluptate natus beatae facilis enim ipsa modi similique et nam excepturi reiciendis, vel eum voluptatem exercitationem pariatur dolores cum, quos voluptatum nostrum consequatur fugit? Minima maxime nobis, amet et beatae tempora nisi fugit quibusdam, molestias, debitis at temporibus placeat? Non id, velit eum, quaerat aliquid voluptates itaque magni exercitationem perspiciatis esse accusantium suscipit eos, consequatur fuga.</p>
+                <% } %>
             </div>
-            <ul class="products__list">
+            <ul class="products__list products-list">
                 <% if (!locals.count) locals.count = 10 %>
                 <% for (let i = 0; i < locals.count; i++) { %>
-                <li class="products__item product-card" itemscope itemtype="https://schema.org/Product">
+                <li class="products-list__item product-card" itemscope itemtype="https://schema.org/Product">
                     <meta itemprop="name" content="Nootropil" />
-                    <link itemprop="url" href="#" />
+                    <link itemprop="url" href="/product.html" />
                     <link itemprop="image" href="img/products/test.webp" />
                     <meta itemprop="model" content="Nootropil" />
                     <meta itemprop="productID" content="Nootropil" />
@@ -24,7 +53,7 @@
                         <meta itemprop="price" content="34.36" />
                         <link itemprop="availability" href="https://schema.org/InStock" />
                     </div>
-                    <a href="#" class="product-card__inner">
+                    <a href="/product.html" class="product-card__inner">
                         <div class="product-card__top">
                             <div class="product-card__image">
                                 <img src="img/products/test.webp" alt="image product" loading="lazy" width="207" height="180">
@@ -47,6 +76,17 @@
                 </li>
                 <% } %>
             </ul>
+            <div class="products__pagination">
+                <ul class="pagination-list">
+                    <li class="pagination-item"><a title="Перейти на 1 страницу из 70" class="current" href="#">1</a></li>
+                    <li class="pagination-item"><a class="paginate" title="Перейти на 2 страницу из 70" href="#">2</a></li>
+                    <li class="pagination-item"><a class="paginate" title="Перейти на 3 страницу из 70" href="#">3</a></li>
+                    <li class="pagination-item"><a class="paginate" title="Перейти на 4 страницу из 70" href="#">4</a></li>
+                    <li class="pagination-item"><a class="paginate" title="Перейти на 5 страницу из 70" href="#">5</a></li>
+                    ...
+                    <li class="pagination-item"><a class="paginate" title="Перейти на 70 страницу из 70" href="#">70</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>

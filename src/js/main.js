@@ -1,17 +1,23 @@
 (function () {
     const header = document.querySelector('.header')
+    const scrollTop = document.querySelector('.scroll-top')
     const mobileMenu = document.querySelector('.mobile-menu')
     const popup = document.querySelector('.popup')
     const headerForm = document.querySelector('.header-form')
     const headerMiddle = document.querySelector('.header__middle')
 
-    if (header) {
+    if (header && scrollTop) {
         document.addEventListener('scroll', checkScroll)
         checkScroll()
 
         function checkScroll() {
-            if (scrollY > 40) header.classList.add('_active')
-            else header.classList.remove('_active')
+            if (scrollY > 40) {
+                header.classList.add('_active')
+                scrollTop.classList.add('_active')
+            } else {
+                header.classList.remove('_active')
+                scrollTop.classList.remove('_active')
+            }
         }
     }
 
@@ -109,6 +115,22 @@
                 </li>`
             }, '')
         }
+    }
+
+    if ('tabs') {
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.tab__nav button')) {
+                const tab = e.target.closest('.tab')
+                const curBtn = e.target.closest('.tab__nav button')
+                const curBody = tab.querySelector(`[data-id="${curBtn.getAttribute('data-for')}"]`)
+                const tabBtns = tab.querySelectorAll('.tab__nav button')
+                const tabBodies = tab.querySelectorAll('.tab__body')
+                for (const btn of tabBtns) btn.classList.remove('_active')
+                for (const body of tabBodies) body.classList.remove('_active')
+                curBtn.classList.add('_active')
+                curBody.classList.add('_active')
+            }
+        })
     }
 
     function escapeHtml(html) {

@@ -9,13 +9,14 @@
         <main class="main">
             <%- include('./components/sections/hero.ejs') %>
             <%- include('./components/sections/cards.ejs') %>
-            <%- include('./components/sections/products.ejs') %>
+            <%- include('./components/sections/products.ejs', { page: 'index' }) %>
             <%- include('./components/sections/reviews.ejs') %>
             <%- include('./components/sections/content.ejs') %>
             <%- include('./components/sections/subscribe.ejs') %>
         </main>
         <%- include('./components/root/footer.ejs') %>
         <%- include('./components/root/popup.ejs') %>
+        <%- include('./components/root/scroll-top.ejs') %>
     </div>
 </body>
 

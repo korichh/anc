@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Category</title>
 
     <link rel="icon" href="img/favicon.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="css/swiper.css">
@@ -257,65 +257,46 @@
             <div class="blur"></div>
         </header>
         <main class="main">
-            <section class="hero">
-                <div class="container">
-                    <div class="hero__inner">
-                        <div class="hero__content">
-                            <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h1>
-                            <p class="text_prim">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quod fugiat sint ut ducimus, ratione dolore totam beatae ex dignissimos soluta hic aperiam dolores praesentium debitis nostrum aliquam iste eaque.</p>
-                            <div class="hero__btns">
-                                <button class="btn btn_prim">Categories</button>
-                                <button class="btn">Contacts</button>
-                                <button class="btn">Lorem</button>
-                            </div>
-                        </div>
-                        <div class="hero__image">
-                            <img src="img/hero/hero.webp" alt="hero image" loading="lazy" width="700" height="361">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="cards">
-                <div class="container">
-                    <div class="cards__inner">
-                        <ul class="cards__list">
+            <section class="breadcrumbs container">
 
 
-                            <li class="cards__item">
-                                <div class="cards__icon"><span class="icon-delivery"></span></div>
-                                <div class="cards__content">
-                                    <p class="cards__title">Lorem, ipsum dolor.</p>
-                                    <p class="cards__text text_prim">Lorem ipsum dolor sit amet consectetur.</p>
-                                </div>
-                            </li>
+                <a class="breadcrumbs-item" href="#">Home</a>
 
-                            <li class="cards__item">
-                                <div class="cards__icon"><span class="icon-delivery"></span></div>
-                                <div class="cards__content">
-                                    <p class="cards__title">Lorem, ipsum dolor.</p>
-                                    <p class="cards__text text_prim">Lorem ipsum dolor sit amet consectetur.</p>
-                                </div>
-                            </li>
 
-                            <li class="cards__item">
-                                <div class="cards__icon"><span class="icon-delivery"></span></div>
-                                <div class="cards__content">
-                                    <p class="cards__title">Lorem, ipsum dolor.</p>
-                                    <p class="cards__text text_prim">Lorem ipsum dolor sit amet consectetur.</p>
-                                </div>
-                            </li>
+                <span class="breadcrumbs-item">Category</span>
 
-                        </ul>
-                    </div>
-                </div>
             </section>
             <section class="products">
                 <div class="container">
                     <div class="products__inner">
                         <div class="products__content">
 
-                            <h2 class="title_prim">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
-                            <p class="text_prim">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias dolorem vel recusandae. Expedita rerum voluptates assumenda sed doloremque laudantium, ad repudiandae optio rem suscipit in nobis necessitatibus sint! Suscipit nostrum, dolores, totam voluptatum tenetur dicta aliquid est architecto minima molestiae, cupiditate amet? Sunt ut possimus unde velit ipsam porro. Distinctio similique labore eos ipsum nostrum ipsa praesentium, impedit ipsam eum. Itaque magnam repellendus iste omnis voluptates fugiat error ducimus nemo harum recusandae. Iusto voluptate natus beatae facilis enim ipsa modi similique et nam excepturi reiciendis, vel eum voluptatem exercitationem pariatur dolores cum, quos voluptatum nostrum consequatur fugit? Minima maxime nobis, amet et beatae tempora nisi fugit quibusdam, molestias, debitis at temporibus placeat? Non id, velit eum, quaerat aliquid voluptates itaque magni exercitationem perspiciatis esse accusantium suscipit eos, consequatur fuga.</p>
+                            <h1 class="title_prim">Category</h1>
+                            <div class="products__filter products-filter">
+                                <div class="products-filter__sort">
+                                    <div class="products-filter__row">
+                                        <span>Sort by price:</span>
+                                        <button class="products-filter__toggle">
+                                            <div class="products-filter__toggle-open"><span class="icon-asc"></span><span>Ascending</span></div>
+                                            <div class="products-filter__toggle-close"><span class="icon-desc"></span><span>Descending</span></div>
+                                        </button>
+                                    </div>
+                                    <div class="products-filter__row">
+                                        <span>Sort by discount:</span>
+                                        <button class="products-filter__toggle">
+                                            <div class="products-filter__toggle-open"><span class="icon-asc"></span><span>Ascending</span></div>
+                                            <div class="products-filter__toggle-close"><span class="icon-desc"></span><span>Descending</span></div>
+                                        </button>
+                                    </div>
+                                    <div class="products-filter__row">
+                                        <span>Sort by rating:</span>
+                                        <button class="products-filter__toggle">
+                                            <div class="products-filter__toggle-open"><span class="icon-asc"></span><span>Ascending</span></div>
+                                            <div class="products-filter__toggle-close"><span class="icon-desc"></span><span>Descending</span></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                         <ul class="products__list products-list">
@@ -713,176 +694,6 @@
                                 <li class="pagination-item"><a class="paginate" title="Перейти на 70 страницу из 70" href="#">70</a></li>
                             </ul>
                         </div>
-                    </div>
-                </div>
-            </section>
-            <section class="reviews">
-                <div class="container">
-                    <div class="reviews__inner">
-                        <div class="reviews__content">
-                            <h2 class="title_prim">Reviews</h2>
-                        </div>
-                        <ul class="reviews__list">
-
-
-                            <li class="reviews__item review-card" itemscope="" itemtype="https://schema.org/Review">
-                                <meta itemprop="datePublished" content="2024-04-05">
-                                <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
-                                <meta itemprop="name" content="{$host}">
-                                <meta itemprop="itemreviewed" content="{$host}">
-                                <div class="review-card__inner">
-                                    <div class="review-card__top">
-                                        <div class="review-card__image"><img src="img/review/default.webp" alt="image default" loading="lazy" width="100" height="100"></div>
-                                        <div class="review-card__author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-                                            <h3 itemprop="name">Lorem, ipsum</h3>
-                                        </div>
-                                    </div>
-                                    <div class="review-card__bottom" itemprop="reviewBody">
-                                        <h3>Lorem ipsum dolor sit amet.</h3>
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi odit animi saepe magni aspernatur! Quo voluptatum aut tempore harum deserunt doloribus, distinctio nemo amet ea? Minima fugiat illum dolorem ipsum.</p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="reviews__item review-card" itemscope="" itemtype="https://schema.org/Review">
-                                <meta itemprop="datePublished" content="2024-04-05">
-                                <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
-                                <meta itemprop="name" content="{$host}">
-                                <meta itemprop="itemreviewed" content="{$host}">
-                                <div class="review-card__inner">
-                                    <div class="review-card__top">
-                                        <div class="review-card__image"><img src="img/review/default.webp" alt="image default" loading="lazy" width="100" height="100"></div>
-                                        <div class="review-card__author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-                                            <h3 itemprop="name">Lorem, ipsum</h3>
-                                        </div>
-                                    </div>
-                                    <div class="review-card__bottom" itemprop="reviewBody">
-                                        <h3>Lorem ipsum dolor sit amet.</h3>
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi odit animi saepe magni aspernatur! Quo voluptatum aut tempore harum deserunt doloribus, distinctio nemo amet ea? Minima fugiat illum dolorem ipsum.</p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="reviews__item review-card" itemscope="" itemtype="https://schema.org/Review">
-                                <meta itemprop="datePublished" content="2024-04-05">
-                                <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
-                                <meta itemprop="name" content="{$host}">
-                                <meta itemprop="itemreviewed" content="{$host}">
-                                <div class="review-card__inner">
-                                    <div class="review-card__top">
-                                        <div class="review-card__image"><img src="img/review/default.webp" alt="image default" loading="lazy" width="100" height="100"></div>
-                                        <div class="review-card__author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-                                            <h3 itemprop="name">Lorem, ipsum</h3>
-                                        </div>
-                                    </div>
-                                    <div class="review-card__bottom" itemprop="reviewBody">
-                                        <h3>Lorem ipsum dolor sit amet.</h3>
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi odit animi saepe magni aspernatur! Quo voluptatum aut tempore harum deserunt doloribus, distinctio nemo amet ea? Minima fugiat illum dolorem ipsum.</p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="reviews__item review-card" itemscope="" itemtype="https://schema.org/Review">
-                                <meta itemprop="datePublished" content="2024-04-05">
-                                <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
-                                <meta itemprop="name" content="{$host}">
-                                <meta itemprop="itemreviewed" content="{$host}">
-                                <div class="review-card__inner">
-                                    <div class="review-card__top">
-                                        <div class="review-card__image"><img src="img/review/default.webp" alt="image default" loading="lazy" width="100" height="100"></div>
-                                        <div class="review-card__author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-                                            <h3 itemprop="name">Lorem, ipsum</h3>
-                                        </div>
-                                    </div>
-                                    <div class="review-card__bottom" itemprop="reviewBody">
-                                        <h3>Lorem ipsum dolor sit amet.</h3>
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi odit animi saepe magni aspernatur! Quo voluptatum aut tempore harum deserunt doloribus, distinctio nemo amet ea? Minima fugiat illum dolorem ipsum.</p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="reviews__item review-card" itemscope="" itemtype="https://schema.org/Review">
-                                <meta itemprop="datePublished" content="2024-04-05">
-                                <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
-                                <meta itemprop="name" content="{$host}">
-                                <meta itemprop="itemreviewed" content="{$host}">
-                                <div class="review-card__inner">
-                                    <div class="review-card__top">
-                                        <div class="review-card__image"><img src="img/review/default.webp" alt="image default" loading="lazy" width="100" height="100"></div>
-                                        <div class="review-card__author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-                                            <h3 itemprop="name">Lorem, ipsum</h3>
-                                        </div>
-                                    </div>
-                                    <div class="review-card__bottom" itemprop="reviewBody">
-                                        <h3>Lorem ipsum dolor sit amet.</h3>
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi odit animi saepe magni aspernatur! Quo voluptatum aut tempore harum deserunt doloribus, distinctio nemo amet ea? Minima fugiat illum dolorem ipsum.</p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="reviews__item review-card" itemscope="" itemtype="https://schema.org/Review">
-                                <meta itemprop="datePublished" content="2024-04-05">
-                                <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
-                                <meta itemprop="name" content="{$host}">
-                                <meta itemprop="itemreviewed" content="{$host}">
-                                <div class="review-card__inner">
-                                    <div class="review-card__top">
-                                        <div class="review-card__image"><img src="img/review/default.webp" alt="image default" loading="lazy" width="100" height="100"></div>
-                                        <div class="review-card__author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-                                            <h3 itemprop="name">Lorem, ipsum</h3>
-                                        </div>
-                                    </div>
-                                    <div class="review-card__bottom" itemprop="reviewBody">
-                                        <h3>Lorem ipsum dolor sit amet.</h3>
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi odit animi saepe magni aspernatur! Quo voluptatum aut tempore harum deserunt doloribus, distinctio nemo amet ea? Minima fugiat illum dolorem ipsum.</p>
-                                    </div>
-                                </div>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section class="content">
-                <div class="container">
-                    <div class="content__inner">
-                        <h1>HTML Ipsum Presents</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sed temporibus quam, sapiente ullam, quod odio laboriosam quo, nulla odit non repellat fuga nostrum dolor aspernatur nisi pariatur minima eveniet?</p>
-                        <h2>Header Level 2</h2>
-                        <ul>
-                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                            <li>Aliquam tincidunt mauris eu risus.</li>
-                        </ul>
-                        <h3>Header Level 3</h3>
-                        <ol>
-                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                            <li>Aliquam tincidunt mauris eu risus.</li>
-                        </ol>
-                        <h4>Header Level 4</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ullam beatae culpa quod nemo nihil animi aut, excepturi iure voluptatum cupiditate enim magnam deleniti provident obcaecati eligendi veritatis fugit optio.</p>
-                    </div>
-                </div>
-            </section>
-            <section class="subscribe">
-                <div class="container">
-                    <div class="subscribe__inner">
-                        <div class="subscribe__content">
-                            <h2 class="title_prim">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste eius ullam ipsam placeat reiciendis.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p class="subscribe__tip">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                        </div>
-                        <form class="subscribe__form form">
-                            <div class="form__row">
-                                <div class="form__column">
-                                    <div class="form__subscribe">
-                                        <input type="email" name="email" required placeholder="Email">
-                                        <button class="btn btn_prim" type="submit"><span class="icon-send"></span><span>Subscribe</span></button>
-                                    </div>
-                                    <label class="form__check"><input type="checkbox" required><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, voluptatem.</span></label>
-                                </div>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </section>
