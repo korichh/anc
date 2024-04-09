@@ -5,6 +5,7 @@
     const popup = document.querySelector('.popup')
     const headerForm = document.querySelector('.header-form')
     const headerMiddle = document.querySelector('.header__middle')
+    const productForm = document.querySelector('.product-form')
 
     if (header && scrollTop) {
         document.addEventListener('scroll', checkScroll)
@@ -117,11 +118,18 @@
         }
     }
 
+    if (productForm) {
+        productForm.addEventListener('submit', (e) => {
+            e.preventDefault()
+        })
+    }
+
     if ('tabs') {
         document.addEventListener('click', (e) => {
-            if (e.target.closest('.tab__nav button')) {
+            if (e.target.closest('.tab [data-for]')) {
+                e.preventDefault()
                 const tab = e.target.closest('.tab')
-                const curBtn = e.target.closest('.tab__nav button')
+                const curBtn = tab.querySelector(`[data-for="${e.target.closest('.tab [data-for]').getAttribute('data-for')}"]`)
                 const curBody = tab.querySelector(`[data-id="${curBtn.getAttribute('data-for')}"]`)
                 const tabBtns = tab.querySelectorAll('.tab__nav button')
                 const tabBodies = tab.querySelectorAll('.tab__body')
@@ -129,6 +137,66 @@
                 for (const body of tabBodies) body.classList.remove('_active')
                 curBtn.classList.add('_active')
                 curBody.classList.add('_active')
+            }
+        })
+    }
+
+    if ('select') {
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.select')) {
+                e.preventDefault()
+                if (e.pointerId < 0) return
+                const select = e.target.closest('.select')
+                const option = e.target.closest('.select__options > button')
+                if (option) {
+                    const selected = select.querySelector('.select__selected-value')
+                    const options = select.querySelectorAll('.select__options > button')
+                    selected.innerHTML = escapeHtml(option.innerHTML)
+                    options.forEach(el => el.classList.remove('_active'))
+                    option.classList.add('_active')
+                    select.classList.remove('_active')
+                } else {
+                    select.classList.add('_active')
+                    select.addEventListener('mouseleave', () => {
+                        select.classList.remove('_active')
+                    }, {
+                        once: true
+                    })
+                }
+            }
+        })
+    }
+
+    if ('count') {
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.count')) {
+                e.preventDefault()
+                const count = e.target.closest('.count')
+                const btn = e.target.closest('.count__btn')
+                const input = count.querySelector('.count__input')
+                const min = +input.getAttribute('min')
+                const max = +input.getAttribute('max')
+                const value = +input.value
+                if (!btn) return
+                if (btn.classList.contains('count__decr')) {
+                    if (value <= min) return input.value = min
+                    input.value = value - 1
+                } else {
+                    if (value >= max) return input.value = max
+                    input.value = value + 1
+                }
+            }
+        })
+        document.addEventListener('input', (e) => {
+            if (e.target.closest('.count')) {
+                e.preventDefault()
+                if (e.inputType === 'deleteContentBackward' || e.inputType === 'deleteContentForward') return
+                const input = e.target.closest('.count__input')
+                const min = +input.getAttribute('min')
+                const max = +input.getAttribute('max')
+                const value = +input.value
+                if (value > max) input.value = max
+                if (value < min) input.value = min
             }
         })
     }
