@@ -318,7 +318,7 @@
                             <p class="text_prim">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias dolorem vel recusandae. Expedita rerum voluptates assumenda sed doloremque laudantium, ad repudiandae optio rem suscipit in nobis necessitatibus sint! Suscipit nostrum, dolores, totam voluptatum tenetur dicta aliquid est architecto minima molestiae, cupiditate amet? Sunt ut possimus unde velit ipsam porro. Distinctio similique labore eos ipsum nostrum ipsa praesentium, impedit ipsam eum. Itaque magnam repellendus iste omnis voluptates fugiat error ducimus nemo harum recusandae. Iusto voluptate natus beatae facilis enim ipsa modi similique et nam excepturi reiciendis, vel eum voluptatem exercitationem pariatur dolores cum, quos voluptatum nostrum consequatur fugit? Minima maxime nobis, amet et beatae tempora nisi fugit quibusdam, molestias, debitis at temporibus placeat? Non id, velit eum, quaerat aliquid voluptates itaque magni exercitationem perspiciatis esse accusantium suscipit eos, consequatur fuga.</p>
 
                         </div>
-                        <ul class="products__list products-list">
+                        <ul class="products-list">
 
 
                             <li class="products-list__item product-card" itemscope itemtype="https://schema.org/Product">
@@ -702,17 +702,7 @@
                             </li>
 
                         </ul>
-                        <div class="products__pagination">
-                            <ul class="pagination-list">
-                                <li class="pagination-item"><a title="Перейти на 1 страницу из 70" class="current" href="#">1</a></li>
-                                <li class="pagination-item"><a class="paginate" title="Перейти на 2 страницу из 70" href="#">2</a></li>
-                                <li class="pagination-item"><a class="paginate" title="Перейти на 3 страницу из 70" href="#">3</a></li>
-                                <li class="pagination-item"><a class="paginate" title="Перейти на 4 страницу из 70" href="#">4</a></li>
-                                <li class="pagination-item"><a class="paginate" title="Перейти на 5 страницу из 70" href="#">5</a></li>
-                                ...
-                                <li class="pagination-item"><a class="paginate" title="Перейти на 70 страницу из 70" href="#">70</a></li>
-                            </ul>
-                        </div>
+
                     </div>
                 </div>
             </section>
@@ -722,10 +712,10 @@
                         <div class="reviews__content">
                             <h2 class="title_prim">Reviews</h2>
                         </div>
-                        <ul class="reviews__list">
+                        <ul class="reviews-list">
 
 
-                            <li class="reviews__item review-card" itemscope="" itemtype="https://schema.org/Review">
+                            <li class="reviews-list__item review-card" itemscope="" itemtype="https://schema.org/Review">
                                 <meta itemprop="datePublished" content="2024-04-05">
                                 <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
                                 <meta itemprop="name" content="{$host}">
@@ -751,7 +741,7 @@
                                 </div>
                             </li>
 
-                            <li class="reviews__item review-card" itemscope="" itemtype="https://schema.org/Review">
+                            <li class="reviews-list__item review-card" itemscope="" itemtype="https://schema.org/Review">
                                 <meta itemprop="datePublished" content="2024-04-05">
                                 <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
                                 <meta itemprop="name" content="{$host}">
@@ -777,7 +767,7 @@
                                 </div>
                             </li>
 
-                            <li class="reviews__item review-card" itemscope="" itemtype="https://schema.org/Review">
+                            <li class="reviews-list__item review-card" itemscope="" itemtype="https://schema.org/Review">
                                 <meta itemprop="datePublished" content="2024-04-05">
                                 <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
                                 <meta itemprop="name" content="{$host}">
@@ -803,7 +793,7 @@
                                 </div>
                             </li>
 
-                            <li class="reviews__item review-card" itemscope="" itemtype="https://schema.org/Review">
+                            <li class="reviews-list__item review-card" itemscope="" itemtype="https://schema.org/Review">
                                 <meta itemprop="datePublished" content="2024-04-05">
                                 <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
                                 <meta itemprop="name" content="{$host}">
@@ -829,7 +819,7 @@
                                 </div>
                             </li>
 
-                            <li class="reviews__item review-card" itemscope="" itemtype="https://schema.org/Review">
+                            <li class="reviews-list__item review-card" itemscope="" itemtype="https://schema.org/Review">
                                 <meta itemprop="datePublished" content="2024-04-05">
                                 <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
                                 <meta itemprop="name" content="{$host}">
@@ -855,7 +845,7 @@
                                 </div>
                             </li>
 
-                            <li class="reviews__item review-card" itemscope="" itemtype="https://schema.org/Review">
+                            <li class="reviews-list__item review-card" itemscope="" itemtype="https://schema.org/Review">
                                 <meta itemprop="datePublished" content="2024-04-05">
                                 <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
                                 <meta itemprop="name" content="{$host}">
@@ -1084,6 +1074,55 @@
                             <div class="cart__total"><span>Total</span><span class="cart__total-value">0</span><span>€</span></div>
                             <button class="cart__btn btn">Go to Cart</button>
                         </div>
+                    </div>
+                </div>
+                <div class="popup__content feedback">
+                    <div class="feedback__inner">
+                        <form class="feedback__form feedback-form form">
+                            <div class="form__row">
+                                <fieldset class="feedback-form__rating form__column">
+                                    <legend>Rate this product</legend>
+                                    <div class="feedback-form__stars">
+                                        <input id="rate5" type="radio" name="rating" value="5" checked>
+                                        <label for="rate5"><span class="icon-star-fill"></span></label>
+                                        <input id="rate4" type="radio" name="rating" value="4">
+                                        <label for="rate4"><span class="icon-star-fill"></span></label>
+                                        <input id="rate3" type="radio" name="rating" value="3">
+                                        <label for="rate3"><span class="icon-star-fill"></span></label>
+                                        <input id="rate2" type="radio" name="rating" value="2">
+                                        <label for="rate2"><span class="icon-star-fill"></span></label>
+                                        <input id="rate1" type="radio" name="rating" value="1">
+                                        <label for="rate1"><span class="icon-star-fill"></span></label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="form__row">
+                                <label class="feedback-form__image form__column">
+                                    <input type="file" accept=".jpg,.jpeg,.png" name="avatar">
+                                    <span>Upload avatar</span>
+                                    <div class="feedback-form__preview"><img src="img/review/default.webp" alt="default avatar" loading="lazy" width="100" height="100"></div>
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <label class="form__column">
+                                    <span>Name</span>
+                                    <input type="text" placeholder="John Doe" name="name" required>
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <label class="form__column">
+                                    <span>Email</span>
+                                    <input type="email" placeholder="example@gmail.com" name="email" required>
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <label class="form__column">
+                                    <span>Review</span>
+                                    <textarea placeholder="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, quasi!" name="text" required></textarea>
+                                </label>
+                            </div>
+                            <button>Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>

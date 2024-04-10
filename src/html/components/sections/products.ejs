@@ -34,59 +34,10 @@
                 <p class="text_prim">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias dolorem vel recusandae. Expedita rerum voluptates assumenda sed doloremque laudantium, ad repudiandae optio rem suscipit in nobis necessitatibus sint! Suscipit nostrum, dolores, totam voluptatum tenetur dicta aliquid est architecto minima molestiae, cupiditate amet? Sunt ut possimus unde velit ipsam porro. Distinctio similique labore eos ipsum nostrum ipsa praesentium, impedit ipsam eum. Itaque magnam repellendus iste omnis voluptates fugiat error ducimus nemo harum recusandae. Iusto voluptate natus beatae facilis enim ipsa modi similique et nam excepturi reiciendis, vel eum voluptatem exercitationem pariatur dolores cum, quos voluptatum nostrum consequatur fugit? Minima maxime nobis, amet et beatae tempora nisi fugit quibusdam, molestias, debitis at temporibus placeat? Non id, velit eum, quaerat aliquid voluptates itaque magni exercitationem perspiciatis esse accusantium suscipit eos, consequatur fuga.</p>
                 <% } %>
             </div>
-            <ul class="products__list products-list">
-                <% if (!locals.count) locals.count = 10 %>
-                <% for (let i = 0; i < locals.count; i++) { %>
-                <li class="products-list__item product-card" itemscope itemtype="https://schema.org/Product">
-                    <meta itemprop="name" content="Nootropil" />
-                    <link itemprop="url" href="/product.html" />
-                    <link itemprop="image" href="img/products/test.webp" />
-                    <meta itemprop="model" content="Nootropil" />
-                    <meta itemprop="productID" content="Nootropil" />
-                    <meta itemprop="category" content="category" />
-                    <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                        <meta itemprop="ratingValue" content="4.5">
-                        <meta itemprop="reviewCount" content="2">
-                    </div>
-                    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                        <meta itemprop="priceCurrency" content="EUR" />
-                        <meta itemprop="price" content="34.36" />
-                        <link itemprop="availability" href="https://schema.org/InStock" />
-                    </div>
-                    <a href="/product.html" class="product-card__inner">
-                        <div class="product-card__top">
-                            <div class="product-card__image">
-                                <img src="img/products/test.webp" alt="image product" loading="lazy" width="207" height="180">
-                                <div class="product-card__discount"><span class="product-card__discount-text">Discount</span><span class="product-card__discount-value">-31%</span></div>
-                                <button class="product-card__save"><span class="icon-heart"></span></button>
-                            </div>
-                            <div class="product-card__content">
-                                <h3 class="product-card__title">Nootropil</h3>
-                                <div class="product-card__stock"><span class="icon-mark"></span><span class="product-card__stock-value">5</span> in stock</div>
-                            </div>
-                        </div>
-                        <div class="product-card__bottom">
-                            <div class="product-card__price">
-                                <del class="product-card__old-price">50 €</del>
-                                <div class="product-card__current-price">34.36 €</div>
-                            </div>
-                            <button class="product-card__buy btn btn_prim"><span class="icon-cart-fill"></span>To Cart</button>
-                        </div>
-                    </a>
-                </li>
-                <% } %>
-            </ul>
-            <div class="products__pagination">
-                <ul class="pagination-list">
-                    <li class="pagination-item"><a title="Перейти на 1 страницу из 70" class="current" href="#">1</a></li>
-                    <li class="pagination-item"><a class="paginate" title="Перейти на 2 страницу из 70" href="#">2</a></li>
-                    <li class="pagination-item"><a class="paginate" title="Перейти на 3 страницу из 70" href="#">3</a></li>
-                    <li class="pagination-item"><a class="paginate" title="Перейти на 4 страницу из 70" href="#">4</a></li>
-                    <li class="pagination-item"><a class="paginate" title="Перейти на 5 страницу из 70" href="#">5</a></li>
-                    ...
-                    <li class="pagination-item"><a class="paginate" title="Перейти на 70 страницу из 70" href="#">70</a></li>
-                </ul>
-            </div>
+            <%- include('./products-list.ejs') %>
+            <% if (locals.page == 'category') { %>
+            <%- include('./pagination.ejs') %>
+            <% } %>
         </div>
     </div>
 </section>

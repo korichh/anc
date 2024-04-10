@@ -285,21 +285,64 @@
                             <div class="product__item product-item">
                                 <div class="product-item__left">
                                     <div class="product-item__left-inner">
-                                        <div class="product-item__top">
-                                            <div class="product-item__image">
-                                                <img src="img/products/test.webp" alt="image product" loading="lazy" width="207" height="180">
-                                                <div class="product-item__discount"><span class="product-item__discount-text">Discount</span><span class="product-item__discount-value">-31%</span></div>
+                                        <div class="product-item__left-content">
+                                            <div class="product-item__top">
+                                                <div class="product-item__image">
+                                                    <img src="img/products/test.webp" alt="image product" loading="lazy" width="207" height="180">
+                                                    <div class="product-item__discount"><span class="product-item__discount-text">Discount</span><span class="product-item__discount-value">-31%</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="product-item__bottom">
+                                                <form class="product-item__bottom-form product-form">
+                                                    <div class="product-form__selects">
+                                                        <div class="product-form__dose">
+                                                            <span>Dose</span>
+                                                            <div class="select _top">
+                                                                <button class="select__selected"><span class="select__selected-value">Select</span><span class="icon-arrow"></span></button>
+                                                                <div class="select__options">
+                                                                    <button>nootropil 400mg * 30</button>
+                                                                    <button>nootropil 400mg * 60</button>
+                                                                    <button>nootropil 400mg * 90</button>
+                                                                    <button>nootropil 400mg * 120</button>
+                                                                    <button>nootropil 400mg * 180</button>
+                                                                    <button>nootropil 400mg * 270</button>
+                                                                    <button>nootropil 400mg * 360</button>
+                                                                    <button>nootropil 800mg * 30</button>
+                                                                    <button>nootropil 800mg * 60</button>
+                                                                    <button>nootropil 800mg * 90</button>
+                                                                    <button>nootropil 800mg * 120</button>
+                                                                    <button>nootropil 800mg * 180</button>
+                                                                    <button>nootropil 800mg * 270</button>
+                                                                    <button>nootropil 800mg * 360</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-form__count">
+                                                            <span>Count</span>
+                                                            <div class="count">
+                                                                <button class="count__btn count__decr">-</button>
+                                                                <input class="count__input" type="number" value="1" min="1" max="20" required>
+                                                                <button class="count__btn count__incr">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-form__submit">
+                                                        <div class="product-form__price">
+                                                            <span class="product-form__old-price"><span>Old price:</span> <del><span class="product-form__old-price-value">50</span> €</del></span>
+                                                            <span class="product-form__current-price"><span>From</span> <span class="product-form__current-price-value">34.36</span> €</span>
+                                                        </div>
+                                                        <button class="btn btn_prim product-form__buy">Buy</button>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
-                                        <!-- <div class="product-item__bottom">
-                                
-                            </div> -->
                                     </div>
                                 </div>
                                 <div class="product-item__right">
                                     <div class="product-item__right-inner">
                                         <div data-id="about" class="tab__body _active product-item__about product-about">
                                             <div class="product-about__top">
+                                                <div class="product-about__article"><span>Vendor code:</span> <span class="product-about__article-value">56386</span></div>
                                                 <div class="product-about__actions">
                                                     <button class="product-about__rating" data-for="feedback">
                                                         <div class="product-about__stars">
@@ -315,11 +358,9 @@
                                                 </div>
                                                 <div class="product-about__stock">In stock — <span class="product-about__stock-value">5</span> pieces</div>
                                                 <ul class="product-about__list">
-                                                    <li class="product-about__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                                                    <li class="product-about__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                                                    <li class="product-about__item">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                                                    <li class="product-about__item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, voluptatibus.</li>
-                                                    <li class="product-about__item">Lorem ipsum dolor sit amet consectetur.</li>
+                                                    <li class="product-about__item"><span class="icon-delivery-fill"></span><span>Delivery throughout gr — 5-9 days</span></li>
+                                                    <li class="product-about__item"><span class="icon-anonym-fill"></span><span>Anonymous packaging</span></li>
+                                                    <li class="product-about__item"><span class="icon-payment-fill"></span><span>Payment methods:</span></li>
                                                 </ul>
                                                 <form class="product-about__form product-form">
                                                     <div class="product-form__selects">
@@ -356,17 +397,642 @@
                                                     </div>
                                                     <div class="product-form__submit">
                                                         <div class="product-form__price">
-                                                            <div class="product-form__old-price"><span>Old price:</span> <del><span class="product-form__old-price-value">50</span> €</del></div>
-                                                            <div class="product-form__current-price"><span>From</span> <span class="product-form__current-price-value">34.36</span> €</div>
+                                                            <span class="product-form__old-price"><span>Old price:</span> <del><span class="product-form__old-price-value">50</span> €</del></span>
+                                                            <span class="product-form__current-price"><span>From</span> <span class="product-form__current-price-value">34.36</span> €</span>
                                                         </div>
                                                         <button class="btn btn_prim product-form__buy">Buy</button>
                                                     </div>
                                                 </form>
                                             </div>
+                                            <div class="product-about__bottom">
+                                                <div class="product-about__warning"><span class="icon-warning"></span><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque dicta esse obcaecati quae?</span></div>
+                                                <div class="product-about__description content">
+                                                    <h3>Description</h3>
+                                                    <p>Lorem, ipsum dolor.</p>
+                                                    <table>
+                                                        <tr>
+                                                            <th>Formato</th>
+                                                            <td>Capsulas</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Cantidad</th>
+                                                            <td>60ud</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Veggi si/no</th>
+                                                            <td>Si</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Precio cantidad</th>
+                                                            <td>0.31€/1 ud</td>
+                                                        </tr>
+                                                    </table>
+                                                    <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h3>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat magni commodi debitis voluptatibus, ducimus perferendis nam ab, nobis vero distinctio asperiores aperiam qui soluta ipsam, animi beatae. Quis facere tempora consectetur commodi placeat accusamus, rerum voluptates mollitia, totam nostrum beatae.</p>
+                                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, adipisci!</h3>
+                                                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                                    <ul>
+                                                        <li>Lorem ipsum dolor sit amet.</li>
+                                                        <li>Lorem, ipsum dolor.</li>
+                                                        <li>Lorem ipsum dolor sit.</li>
+                                                        <li>Lorem ipsum dolor sit.</li>
+                                                    </ul>
+                                                    <h3>Lorem, ipsum.</h3>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quae rem illo voluptatibus. Omnis, doloribus quaerat.</p>
+                                                    <h3>Lorem.</h3>
+                                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, id odit a ullam sit hic laudantium quisquam maxime nostrum cum!</p>
+                                                    <h3>FAQ</h3>
+                                                    <div class="acc" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+                                                        <div class="acc__inner">
+                                                            <button class="acc__head">
+                                                                <p itemprop="name">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><span class="icon-arrow"></span>
+                                                            </button>
+                                                            <div class="acc__body" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                                                                <div itemprop="text">
+                                                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, ut? Quam perspiciatis esse minima dignissimos, facilis quaerat cum veritatis labore doloribus vero nam assumenda tempora totam voluptates fuga enim accusantium?</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="acc" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+                                                        <div class="acc__inner">
+                                                            <button class="acc__head">
+                                                                <p itemprop="name">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><span class="icon-arrow"></span>
+                                                            </button>
+                                                            <div class="acc__body" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                                                                <div itemprop="text">
+                                                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, ut? Quam perspiciatis esse minima dignissimos, facilis quaerat cum veritatis labore doloribus vero nam assumenda tempora totam voluptates fuga enim accusantium?</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div data-id="relevant" class="tab__body product-item__relevant product-relevant">
+                                            <ul class="products-list">
+
+
+                                                <li class="products-list__item product-card" itemscope itemtype="https://schema.org/Product">
+                                                    <meta itemprop="name" content="Nootropil" />
+                                                    <link itemprop="url" href="/product.html" />
+                                                    <link itemprop="image" href="img/products/test.webp" />
+                                                    <meta itemprop="model" content="Nootropil" />
+                                                    <meta itemprop="productID" content="Nootropil" />
+                                                    <meta itemprop="category" content="category" />
+                                                    <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                                        <meta itemprop="ratingValue" content="4.5">
+                                                        <meta itemprop="reviewCount" content="2">
+                                                    </div>
+                                                    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                                        <meta itemprop="priceCurrency" content="EUR" />
+                                                        <meta itemprop="price" content="34.36" />
+                                                        <link itemprop="availability" href="https://schema.org/InStock" />
+                                                    </div>
+                                                    <a href="/product.html" class="product-card__inner">
+                                                        <div class="product-card__top">
+                                                            <div class="product-card__image">
+                                                                <img src="img/products/test.webp" alt="image product" loading="lazy" width="207" height="180">
+                                                                <div class="product-card__discount"><span class="product-card__discount-text">Discount</span><span class="product-card__discount-value">-31%</span></div>
+                                                                <button class="product-card__save"><span class="icon-heart"></span></button>
+                                                            </div>
+                                                            <div class="product-card__content">
+                                                                <h3 class="product-card__title">Nootropil</h3>
+                                                                <div class="product-card__stock"><span class="icon-mark"></span><span class="product-card__stock-value">5</span> in stock</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-card__bottom">
+                                                            <div class="product-card__price">
+                                                                <del class="product-card__old-price">50 €</del>
+                                                                <div class="product-card__current-price">34.36 €</div>
+                                                            </div>
+                                                            <button class="product-card__buy btn btn_prim"><span class="icon-cart-fill"></span>To Cart</button>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li class="products-list__item product-card" itemscope itemtype="https://schema.org/Product">
+                                                    <meta itemprop="name" content="Nootropil" />
+                                                    <link itemprop="url" href="/product.html" />
+                                                    <link itemprop="image" href="img/products/test.webp" />
+                                                    <meta itemprop="model" content="Nootropil" />
+                                                    <meta itemprop="productID" content="Nootropil" />
+                                                    <meta itemprop="category" content="category" />
+                                                    <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                                        <meta itemprop="ratingValue" content="4.5">
+                                                        <meta itemprop="reviewCount" content="2">
+                                                    </div>
+                                                    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                                        <meta itemprop="priceCurrency" content="EUR" />
+                                                        <meta itemprop="price" content="34.36" />
+                                                        <link itemprop="availability" href="https://schema.org/InStock" />
+                                                    </div>
+                                                    <a href="/product.html" class="product-card__inner">
+                                                        <div class="product-card__top">
+                                                            <div class="product-card__image">
+                                                                <img src="img/products/test.webp" alt="image product" loading="lazy" width="207" height="180">
+                                                                <div class="product-card__discount"><span class="product-card__discount-text">Discount</span><span class="product-card__discount-value">-31%</span></div>
+                                                                <button class="product-card__save"><span class="icon-heart"></span></button>
+                                                            </div>
+                                                            <div class="product-card__content">
+                                                                <h3 class="product-card__title">Nootropil</h3>
+                                                                <div class="product-card__stock"><span class="icon-mark"></span><span class="product-card__stock-value">5</span> in stock</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-card__bottom">
+                                                            <div class="product-card__price">
+                                                                <del class="product-card__old-price">50 €</del>
+                                                                <div class="product-card__current-price">34.36 €</div>
+                                                            </div>
+                                                            <button class="product-card__buy btn btn_prim"><span class="icon-cart-fill"></span>To Cart</button>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li class="products-list__item product-card" itemscope itemtype="https://schema.org/Product">
+                                                    <meta itemprop="name" content="Nootropil" />
+                                                    <link itemprop="url" href="/product.html" />
+                                                    <link itemprop="image" href="img/products/test.webp" />
+                                                    <meta itemprop="model" content="Nootropil" />
+                                                    <meta itemprop="productID" content="Nootropil" />
+                                                    <meta itemprop="category" content="category" />
+                                                    <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                                        <meta itemprop="ratingValue" content="4.5">
+                                                        <meta itemprop="reviewCount" content="2">
+                                                    </div>
+                                                    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                                        <meta itemprop="priceCurrency" content="EUR" />
+                                                        <meta itemprop="price" content="34.36" />
+                                                        <link itemprop="availability" href="https://schema.org/InStock" />
+                                                    </div>
+                                                    <a href="/product.html" class="product-card__inner">
+                                                        <div class="product-card__top">
+                                                            <div class="product-card__image">
+                                                                <img src="img/products/test.webp" alt="image product" loading="lazy" width="207" height="180">
+                                                                <div class="product-card__discount"><span class="product-card__discount-text">Discount</span><span class="product-card__discount-value">-31%</span></div>
+                                                                <button class="product-card__save"><span class="icon-heart"></span></button>
+                                                            </div>
+                                                            <div class="product-card__content">
+                                                                <h3 class="product-card__title">Nootropil</h3>
+                                                                <div class="product-card__stock"><span class="icon-mark"></span><span class="product-card__stock-value">5</span> in stock</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-card__bottom">
+                                                            <div class="product-card__price">
+                                                                <del class="product-card__old-price">50 €</del>
+                                                                <div class="product-card__current-price">34.36 €</div>
+                                                            </div>
+                                                            <button class="product-card__buy btn btn_prim"><span class="icon-cart-fill"></span>To Cart</button>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li class="products-list__item product-card" itemscope itemtype="https://schema.org/Product">
+                                                    <meta itemprop="name" content="Nootropil" />
+                                                    <link itemprop="url" href="/product.html" />
+                                                    <link itemprop="image" href="img/products/test.webp" />
+                                                    <meta itemprop="model" content="Nootropil" />
+                                                    <meta itemprop="productID" content="Nootropil" />
+                                                    <meta itemprop="category" content="category" />
+                                                    <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                                        <meta itemprop="ratingValue" content="4.5">
+                                                        <meta itemprop="reviewCount" content="2">
+                                                    </div>
+                                                    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                                        <meta itemprop="priceCurrency" content="EUR" />
+                                                        <meta itemprop="price" content="34.36" />
+                                                        <link itemprop="availability" href="https://schema.org/InStock" />
+                                                    </div>
+                                                    <a href="/product.html" class="product-card__inner">
+                                                        <div class="product-card__top">
+                                                            <div class="product-card__image">
+                                                                <img src="img/products/test.webp" alt="image product" loading="lazy" width="207" height="180">
+                                                                <div class="product-card__discount"><span class="product-card__discount-text">Discount</span><span class="product-card__discount-value">-31%</span></div>
+                                                                <button class="product-card__save"><span class="icon-heart"></span></button>
+                                                            </div>
+                                                            <div class="product-card__content">
+                                                                <h3 class="product-card__title">Nootropil</h3>
+                                                                <div class="product-card__stock"><span class="icon-mark"></span><span class="product-card__stock-value">5</span> in stock</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-card__bottom">
+                                                            <div class="product-card__price">
+                                                                <del class="product-card__old-price">50 €</del>
+                                                                <div class="product-card__current-price">34.36 €</div>
+                                                            </div>
+                                                            <button class="product-card__buy btn btn_prim"><span class="icon-cart-fill"></span>To Cart</button>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li class="products-list__item product-card" itemscope itemtype="https://schema.org/Product">
+                                                    <meta itemprop="name" content="Nootropil" />
+                                                    <link itemprop="url" href="/product.html" />
+                                                    <link itemprop="image" href="img/products/test.webp" />
+                                                    <meta itemprop="model" content="Nootropil" />
+                                                    <meta itemprop="productID" content="Nootropil" />
+                                                    <meta itemprop="category" content="category" />
+                                                    <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                                        <meta itemprop="ratingValue" content="4.5">
+                                                        <meta itemprop="reviewCount" content="2">
+                                                    </div>
+                                                    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                                        <meta itemprop="priceCurrency" content="EUR" />
+                                                        <meta itemprop="price" content="34.36" />
+                                                        <link itemprop="availability" href="https://schema.org/InStock" />
+                                                    </div>
+                                                    <a href="/product.html" class="product-card__inner">
+                                                        <div class="product-card__top">
+                                                            <div class="product-card__image">
+                                                                <img src="img/products/test.webp" alt="image product" loading="lazy" width="207" height="180">
+                                                                <div class="product-card__discount"><span class="product-card__discount-text">Discount</span><span class="product-card__discount-value">-31%</span></div>
+                                                                <button class="product-card__save"><span class="icon-heart"></span></button>
+                                                            </div>
+                                                            <div class="product-card__content">
+                                                                <h3 class="product-card__title">Nootropil</h3>
+                                                                <div class="product-card__stock"><span class="icon-mark"></span><span class="product-card__stock-value">5</span> in stock</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-card__bottom">
+                                                            <div class="product-card__price">
+                                                                <del class="product-card__old-price">50 €</del>
+                                                                <div class="product-card__current-price">34.36 €</div>
+                                                            </div>
+                                                            <button class="product-card__buy btn btn_prim"><span class="icon-cart-fill"></span>To Cart</button>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li class="products-list__item product-card" itemscope itemtype="https://schema.org/Product">
+                                                    <meta itemprop="name" content="Nootropil" />
+                                                    <link itemprop="url" href="/product.html" />
+                                                    <link itemprop="image" href="img/products/test.webp" />
+                                                    <meta itemprop="model" content="Nootropil" />
+                                                    <meta itemprop="productID" content="Nootropil" />
+                                                    <meta itemprop="category" content="category" />
+                                                    <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                                        <meta itemprop="ratingValue" content="4.5">
+                                                        <meta itemprop="reviewCount" content="2">
+                                                    </div>
+                                                    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                                        <meta itemprop="priceCurrency" content="EUR" />
+                                                        <meta itemprop="price" content="34.36" />
+                                                        <link itemprop="availability" href="https://schema.org/InStock" />
+                                                    </div>
+                                                    <a href="/product.html" class="product-card__inner">
+                                                        <div class="product-card__top">
+                                                            <div class="product-card__image">
+                                                                <img src="img/products/test.webp" alt="image product" loading="lazy" width="207" height="180">
+                                                                <div class="product-card__discount"><span class="product-card__discount-text">Discount</span><span class="product-card__discount-value">-31%</span></div>
+                                                                <button class="product-card__save"><span class="icon-heart"></span></button>
+                                                            </div>
+                                                            <div class="product-card__content">
+                                                                <h3 class="product-card__title">Nootropil</h3>
+                                                                <div class="product-card__stock"><span class="icon-mark"></span><span class="product-card__stock-value">5</span> in stock</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-card__bottom">
+                                                            <div class="product-card__price">
+                                                                <del class="product-card__old-price">50 €</del>
+                                                                <div class="product-card__current-price">34.36 €</div>
+                                                            </div>
+                                                            <button class="product-card__buy btn btn_prim"><span class="icon-cart-fill"></span>To Cart</button>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li class="products-list__item product-card" itemscope itemtype="https://schema.org/Product">
+                                                    <meta itemprop="name" content="Nootropil" />
+                                                    <link itemprop="url" href="/product.html" />
+                                                    <link itemprop="image" href="img/products/test.webp" />
+                                                    <meta itemprop="model" content="Nootropil" />
+                                                    <meta itemprop="productID" content="Nootropil" />
+                                                    <meta itemprop="category" content="category" />
+                                                    <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                                        <meta itemprop="ratingValue" content="4.5">
+                                                        <meta itemprop="reviewCount" content="2">
+                                                    </div>
+                                                    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                                        <meta itemprop="priceCurrency" content="EUR" />
+                                                        <meta itemprop="price" content="34.36" />
+                                                        <link itemprop="availability" href="https://schema.org/InStock" />
+                                                    </div>
+                                                    <a href="/product.html" class="product-card__inner">
+                                                        <div class="product-card__top">
+                                                            <div class="product-card__image">
+                                                                <img src="img/products/test.webp" alt="image product" loading="lazy" width="207" height="180">
+                                                                <div class="product-card__discount"><span class="product-card__discount-text">Discount</span><span class="product-card__discount-value">-31%</span></div>
+                                                                <button class="product-card__save"><span class="icon-heart"></span></button>
+                                                            </div>
+                                                            <div class="product-card__content">
+                                                                <h3 class="product-card__title">Nootropil</h3>
+                                                                <div class="product-card__stock"><span class="icon-mark"></span><span class="product-card__stock-value">5</span> in stock</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-card__bottom">
+                                                            <div class="product-card__price">
+                                                                <del class="product-card__old-price">50 €</del>
+                                                                <div class="product-card__current-price">34.36 €</div>
+                                                            </div>
+                                                            <button class="product-card__buy btn btn_prim"><span class="icon-cart-fill"></span>To Cart</button>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li class="products-list__item product-card" itemscope itemtype="https://schema.org/Product">
+                                                    <meta itemprop="name" content="Nootropil" />
+                                                    <link itemprop="url" href="/product.html" />
+                                                    <link itemprop="image" href="img/products/test.webp" />
+                                                    <meta itemprop="model" content="Nootropil" />
+                                                    <meta itemprop="productID" content="Nootropil" />
+                                                    <meta itemprop="category" content="category" />
+                                                    <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                                        <meta itemprop="ratingValue" content="4.5">
+                                                        <meta itemprop="reviewCount" content="2">
+                                                    </div>
+                                                    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                                        <meta itemprop="priceCurrency" content="EUR" />
+                                                        <meta itemprop="price" content="34.36" />
+                                                        <link itemprop="availability" href="https://schema.org/InStock" />
+                                                    </div>
+                                                    <a href="/product.html" class="product-card__inner">
+                                                        <div class="product-card__top">
+                                                            <div class="product-card__image">
+                                                                <img src="img/products/test.webp" alt="image product" loading="lazy" width="207" height="180">
+                                                                <div class="product-card__discount"><span class="product-card__discount-text">Discount</span><span class="product-card__discount-value">-31%</span></div>
+                                                                <button class="product-card__save"><span class="icon-heart"></span></button>
+                                                            </div>
+                                                            <div class="product-card__content">
+                                                                <h3 class="product-card__title">Nootropil</h3>
+                                                                <div class="product-card__stock"><span class="icon-mark"></span><span class="product-card__stock-value">5</span> in stock</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-card__bottom">
+                                                            <div class="product-card__price">
+                                                                <del class="product-card__old-price">50 €</del>
+                                                                <div class="product-card__current-price">34.36 €</div>
+                                                            </div>
+                                                            <button class="product-card__buy btn btn_prim"><span class="icon-cart-fill"></span>To Cart</button>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li class="products-list__item product-card" itemscope itemtype="https://schema.org/Product">
+                                                    <meta itemprop="name" content="Nootropil" />
+                                                    <link itemprop="url" href="/product.html" />
+                                                    <link itemprop="image" href="img/products/test.webp" />
+                                                    <meta itemprop="model" content="Nootropil" />
+                                                    <meta itemprop="productID" content="Nootropil" />
+                                                    <meta itemprop="category" content="category" />
+                                                    <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                                        <meta itemprop="ratingValue" content="4.5">
+                                                        <meta itemprop="reviewCount" content="2">
+                                                    </div>
+                                                    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                                        <meta itemprop="priceCurrency" content="EUR" />
+                                                        <meta itemprop="price" content="34.36" />
+                                                        <link itemprop="availability" href="https://schema.org/InStock" />
+                                                    </div>
+                                                    <a href="/product.html" class="product-card__inner">
+                                                        <div class="product-card__top">
+                                                            <div class="product-card__image">
+                                                                <img src="img/products/test.webp" alt="image product" loading="lazy" width="207" height="180">
+                                                                <div class="product-card__discount"><span class="product-card__discount-text">Discount</span><span class="product-card__discount-value">-31%</span></div>
+                                                                <button class="product-card__save"><span class="icon-heart"></span></button>
+                                                            </div>
+                                                            <div class="product-card__content">
+                                                                <h3 class="product-card__title">Nootropil</h3>
+                                                                <div class="product-card__stock"><span class="icon-mark"></span><span class="product-card__stock-value">5</span> in stock</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-card__bottom">
+                                                            <div class="product-card__price">
+                                                                <del class="product-card__old-price">50 €</del>
+                                                                <div class="product-card__current-price">34.36 €</div>
+                                                            </div>
+                                                            <button class="product-card__buy btn btn_prim"><span class="icon-cart-fill"></span>To Cart</button>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li class="products-list__item product-card" itemscope itemtype="https://schema.org/Product">
+                                                    <meta itemprop="name" content="Nootropil" />
+                                                    <link itemprop="url" href="/product.html" />
+                                                    <link itemprop="image" href="img/products/test.webp" />
+                                                    <meta itemprop="model" content="Nootropil" />
+                                                    <meta itemprop="productID" content="Nootropil" />
+                                                    <meta itemprop="category" content="category" />
+                                                    <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                                        <meta itemprop="ratingValue" content="4.5">
+                                                        <meta itemprop="reviewCount" content="2">
+                                                    </div>
+                                                    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                                        <meta itemprop="priceCurrency" content="EUR" />
+                                                        <meta itemprop="price" content="34.36" />
+                                                        <link itemprop="availability" href="https://schema.org/InStock" />
+                                                    </div>
+                                                    <a href="/product.html" class="product-card__inner">
+                                                        <div class="product-card__top">
+                                                            <div class="product-card__image">
+                                                                <img src="img/products/test.webp" alt="image product" loading="lazy" width="207" height="180">
+                                                                <div class="product-card__discount"><span class="product-card__discount-text">Discount</span><span class="product-card__discount-value">-31%</span></div>
+                                                                <button class="product-card__save"><span class="icon-heart"></span></button>
+                                                            </div>
+                                                            <div class="product-card__content">
+                                                                <h3 class="product-card__title">Nootropil</h3>
+                                                                <div class="product-card__stock"><span class="icon-mark"></span><span class="product-card__stock-value">5</span> in stock</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-card__bottom">
+                                                            <div class="product-card__price">
+                                                                <del class="product-card__old-price">50 €</del>
+                                                                <div class="product-card__current-price">34.36 €</div>
+                                                            </div>
+                                                            <button class="product-card__buy btn btn_prim"><span class="icon-cart-fill"></span>To Cart</button>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                            <div class="products__pagination">
+                                                <ul class="pagination-list">
+                                                    <li class="pagination-item"><a title="Перейти на 1 страницу из 70" class="current" href="#">1</a></li>
+                                                    <li class="pagination-item"><a class="paginate" title="Перейти на 2 страницу из 70" href="#">2</a></li>
+                                                    <li class="pagination-item"><a class="paginate" title="Перейти на 3 страницу из 70" href="#">3</a></li>
+                                                    <li class="pagination-item"><a class="paginate" title="Перейти на 4 страницу из 70" href="#">4</a></li>
+                                                    <li class="pagination-item"><a class="paginate" title="Перейти на 5 страницу из 70" href="#">5</a></li>
+                                                    ...
+                                                    <li class="pagination-item"><a class="paginate" title="Перейти на 70 страницу из 70" href="#">70</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                         <div data-id="feedback" class="tab__body product-item__feedback product-feedback">
+                                            <div class="product-feedback__top">
+                                                <div class="product-feedback__title">Leave your feedback about the product</div>
+                                                <button data-popup="feedback|Leave a feedback" class="btn btn_prim product-feedback__btn">Leave a feedback</button>
+                                            </div>
+                                            <div class="product-feedback__bottom">
+                                                <ul class="reviews-list">
+
+
+                                                    <li class="reviews-list__item review-card" itemscope="" itemtype="https://schema.org/Review">
+                                                        <meta itemprop="datePublished" content="2024-04-05">
+                                                        <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
+                                                        <meta itemprop="name" content="{$host}">
+                                                        <meta itemprop="itemreviewed" content="{$host}">
+                                                        <div class="review-card__inner">
+                                                            <div class="review-card__top">
+                                                                <div class="review-card__image"><img src="img/review/default.webp" alt="image default" loading="lazy" width="100" height="100"></div>
+                                                                <div class="review-card__author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+                                                                    <h3 itemprop="name">Lorem, ipsum</h3>
+                                                                    <div class="review-card__stars">
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="review-card__bottom" itemprop="reviewBody">
+                                                                <h3>Lorem ipsum dolor sit amet.</h3>
+                                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi odit animi saepe magni aspernatur! Quo voluptatum aut tempore harum deserunt doloribus, distinctio nemo amet ea? Minima fugiat illum dolorem ipsum.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="reviews-list__item review-card" itemscope="" itemtype="https://schema.org/Review">
+                                                        <meta itemprop="datePublished" content="2024-04-05">
+                                                        <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
+                                                        <meta itemprop="name" content="{$host}">
+                                                        <meta itemprop="itemreviewed" content="{$host}">
+                                                        <div class="review-card__inner">
+                                                            <div class="review-card__top">
+                                                                <div class="review-card__image"><img src="img/review/default.webp" alt="image default" loading="lazy" width="100" height="100"></div>
+                                                                <div class="review-card__author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+                                                                    <h3 itemprop="name">Lorem, ipsum</h3>
+                                                                    <div class="review-card__stars">
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="review-card__bottom" itemprop="reviewBody">
+                                                                <h3>Lorem ipsum dolor sit amet.</h3>
+                                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi odit animi saepe magni aspernatur! Quo voluptatum aut tempore harum deserunt doloribus, distinctio nemo amet ea? Minima fugiat illum dolorem ipsum.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="reviews-list__item review-card" itemscope="" itemtype="https://schema.org/Review">
+                                                        <meta itemprop="datePublished" content="2024-04-05">
+                                                        <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
+                                                        <meta itemprop="name" content="{$host}">
+                                                        <meta itemprop="itemreviewed" content="{$host}">
+                                                        <div class="review-card__inner">
+                                                            <div class="review-card__top">
+                                                                <div class="review-card__image"><img src="img/review/default.webp" alt="image default" loading="lazy" width="100" height="100"></div>
+                                                                <div class="review-card__author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+                                                                    <h3 itemprop="name">Lorem, ipsum</h3>
+                                                                    <div class="review-card__stars">
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="review-card__bottom" itemprop="reviewBody">
+                                                                <h3>Lorem ipsum dolor sit amet.</h3>
+                                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi odit animi saepe magni aspernatur! Quo voluptatum aut tempore harum deserunt doloribus, distinctio nemo amet ea? Minima fugiat illum dolorem ipsum.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="reviews-list__item review-card" itemscope="" itemtype="https://schema.org/Review">
+                                                        <meta itemprop="datePublished" content="2024-04-05">
+                                                        <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
+                                                        <meta itemprop="name" content="{$host}">
+                                                        <meta itemprop="itemreviewed" content="{$host}">
+                                                        <div class="review-card__inner">
+                                                            <div class="review-card__top">
+                                                                <div class="review-card__image"><img src="img/review/default.webp" alt="image default" loading="lazy" width="100" height="100"></div>
+                                                                <div class="review-card__author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+                                                                    <h3 itemprop="name">Lorem, ipsum</h3>
+                                                                    <div class="review-card__stars">
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="review-card__bottom" itemprop="reviewBody">
+                                                                <h3>Lorem ipsum dolor sit amet.</h3>
+                                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi odit animi saepe magni aspernatur! Quo voluptatum aut tempore harum deserunt doloribus, distinctio nemo amet ea? Minima fugiat illum dolorem ipsum.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="reviews-list__item review-card" itemscope="" itemtype="https://schema.org/Review">
+                                                        <meta itemprop="datePublished" content="2024-04-05">
+                                                        <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
+                                                        <meta itemprop="name" content="{$host}">
+                                                        <meta itemprop="itemreviewed" content="{$host}">
+                                                        <div class="review-card__inner">
+                                                            <div class="review-card__top">
+                                                                <div class="review-card__image"><img src="img/review/default.webp" alt="image default" loading="lazy" width="100" height="100"></div>
+                                                                <div class="review-card__author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+                                                                    <h3 itemprop="name">Lorem, ipsum</h3>
+                                                                    <div class="review-card__stars">
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="review-card__bottom" itemprop="reviewBody">
+                                                                <h3>Lorem ipsum dolor sit amet.</h3>
+                                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi odit animi saepe magni aspernatur! Quo voluptatum aut tempore harum deserunt doloribus, distinctio nemo amet ea? Minima fugiat illum dolorem ipsum.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="reviews-list__item review-card" itemscope="" itemtype="https://schema.org/Review">
+                                                        <meta itemprop="datePublished" content="2024-04-05">
+                                                        <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
+                                                        <meta itemprop="name" content="{$host}">
+                                                        <meta itemprop="itemreviewed" content="{$host}">
+                                                        <div class="review-card__inner">
+                                                            <div class="review-card__top">
+                                                                <div class="review-card__image"><img src="img/review/default.webp" alt="image default" loading="lazy" width="100" height="100"></div>
+                                                                <div class="review-card__author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+                                                                    <h3 itemprop="name">Lorem, ipsum</h3>
+                                                                    <div class="review-card__stars">
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                        <span class="icon-star-fill"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="review-card__bottom" itemprop="reviewBody">
+                                                                <h3>Lorem ipsum dolor sit amet.</h3>
+                                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi odit animi saepe magni aspernatur! Quo voluptatum aut tempore harum deserunt doloribus, distinctio nemo amet ea? Minima fugiat illum dolorem ipsum.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -532,6 +1198,55 @@
                             <div class="cart__total"><span>Total</span><span class="cart__total-value">0</span><span>€</span></div>
                             <button class="cart__btn btn">Go to Cart</button>
                         </div>
+                    </div>
+                </div>
+                <div class="popup__content feedback">
+                    <div class="feedback__inner">
+                        <form class="feedback__form feedback-form form">
+                            <div class="form__row">
+                                <fieldset class="feedback-form__rating form__column">
+                                    <legend>Rate this product</legend>
+                                    <div class="feedback-form__stars">
+                                        <input id="rate5" type="radio" name="rating" value="5" checked>
+                                        <label for="rate5"><span class="icon-star-fill"></span></label>
+                                        <input id="rate4" type="radio" name="rating" value="4">
+                                        <label for="rate4"><span class="icon-star-fill"></span></label>
+                                        <input id="rate3" type="radio" name="rating" value="3">
+                                        <label for="rate3"><span class="icon-star-fill"></span></label>
+                                        <input id="rate2" type="radio" name="rating" value="2">
+                                        <label for="rate2"><span class="icon-star-fill"></span></label>
+                                        <input id="rate1" type="radio" name="rating" value="1">
+                                        <label for="rate1"><span class="icon-star-fill"></span></label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="form__row">
+                                <label class="feedback-form__image form__column">
+                                    <input type="file" accept=".jpg,.jpeg,.png" name="avatar">
+                                    <span>Upload avatar</span>
+                                    <div class="feedback-form__preview"><img src="img/review/default.webp" alt="default avatar" loading="lazy" width="100" height="100"></div>
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <label class="form__column">
+                                    <span>Name</span>
+                                    <input type="text" placeholder="John Doe" name="name" required>
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <label class="form__column">
+                                    <span>Email</span>
+                                    <input type="email" placeholder="example@gmail.com" name="email" required>
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <label class="form__column">
+                                    <span>Review</span>
+                                    <textarea placeholder="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, quasi!" name="text" required></textarea>
+                                </label>
+                            </div>
+                            <button>Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -5,10 +5,11 @@
     const popup = document.querySelector('.popup')
     const headerForm = document.querySelector('.header-form')
     const headerMiddle = document.querySelector('.header__middle')
-    const productForm = document.querySelector('.product-form')
+    const productItem = document.querySelector('.product-item')
+    const productForms = document.querySelectorAll('.product-form')
 
     if (header && scrollTop) {
-        document.addEventListener('scroll', checkScroll)
+        window.addEventListener('scroll', checkScroll)
         checkScroll()
 
         function checkScroll() {
@@ -118,9 +119,69 @@
         }
     }
 
-    if (productForm) {
-        productForm.addEventListener('submit', (e) => {
-            e.preventDefault()
+    if (header && productItem) {
+        const wrapper = productItem.querySelector('.product-item__left')
+        const inner = productItem.querySelector('.product-item__left-inner')
+        const content = productItem.querySelector('.product-item__left-content')
+        const about = productItem.querySelector('.product-about__top')
+
+        window.addEventListener('scroll', stickyItem)
+        window.addEventListener('resize', stickyItem)
+        setTimeout(() => {
+            stickyItem()
+        }, 350);
+
+        function stickyItem() {
+            if (getComputedStyle(inner).position === 'static') return stylize(inner)
+
+            const shift = 15
+            const bodyPadding = parseInt(getComputedStyle(document.body).paddingTop)
+            const headerHeight = header.offsetHeight + parseInt(getComputedStyle(header).top)
+            const wrapperWidth = wrapper.offsetWidth
+            const wrapperHeight = wrapper.offsetHeight
+            const contentHeight = content.offsetHeight
+            const aboutHeight = about.offsetHeight
+            const wrapperTop = wrapper.getBoundingClientRect().top - headerHeight - shift
+            const wrapperLeft = wrapper.getBoundingClientRect().left
+            const wrapperBottom = wrapper.offsetTop + bodyPadding + wrapperHeight - contentHeight - shift - headerHeight
+            const aboutBottom = about.offsetTop + bodyPadding + aboutHeight - headerHeight
+            const contentTop = wrapperHeight - contentHeight
+            const checkBottom = scrollY
+
+            stylize(wrapper, {
+                minHeight: `${contentHeight}px`
+            })
+
+            if (wrapperTop > 0) {
+                stylize(inner)
+            } else if (wrapperTop <= 0 && checkBottom <= wrapperBottom) {
+                stylize(inner, {
+                    position: 'fixed',
+                    zIndex: '1',
+                    width: `${wrapperWidth}px`,
+                    height: `calc(100% - ${headerHeight + shift * 2}px)`,
+                    top: `${headerHeight + shift}px`,
+                    left: `${wrapperLeft}px`,
+                    overflow: 'hidden auto',
+                })
+            } else if (checkBottom > wrapperBottom) {
+                stylize(inner, {
+                    position: 'relative',
+                    zIndex: '1',
+                    top: `${contentTop}px`,
+                })
+            }
+
+            if (aboutHeight && (checkBottom > aboutBottom)) inner.classList.add('_active')
+            else inner.classList.remove('_active')
+        }
+    }
+
+    if (productForms && productForms.length > 0) {
+        productForms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault()
+            })
         })
     }
 
@@ -137,6 +198,12 @@
                 for (const body of tabBodies) body.classList.remove('_active')
                 curBtn.classList.add('_active')
                 curBody.classList.add('_active')
+            }
+            if (e.target.closest('.product__tab [data-for]')) {
+                const tab = e.target.closest('.product__tab')
+                const dataFor = e.target.closest('.tab [data-for]').getAttribute('data-for')
+                if (dataFor !== 'about') tab.classList.add('_extend')
+                else tab.classList.remove('_extend')
             }
         })
     }
@@ -201,6 +268,15 @@
         })
     }
 
+    if ('acc') {
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.acc__head')) {
+                const acc = e.target.closest('.acc')
+                acc.classList.toggle('_active')
+            }
+        })
+    }
+
     function escapeHtml(html) {
         return html
             .replace(/&/g, "&amp;")
@@ -208,5 +284,10 @@
             .replace(/>/g, "&gt;")
             .replace(/"/g, "&quot;")
             .replace(/'/g, "&#039;");
+    }
+
+    function stylize(el, props = {}) {
+        el.style.cssText = ''
+        for (const prop in props) el.style[prop] = props[prop]
     }
 })()
