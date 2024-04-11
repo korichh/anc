@@ -1,7 +1,7 @@
 <section class="popup">
     <div class="popup__inner">
         <div class="popup__head">
-            <h2 class="title">Choose the city</h2>
+            <h2 class="title"></h2>
             <button class="close"><span class="icon-close"></span></button>
         </div>
         <div class="popup__content location">
@@ -35,27 +35,8 @@
         </div>
         <div class="popup__content cart">
             <div class="cart__inner">
-                <div class="cart__count">
-                    <span class="cart__count-value">0</span> <span>items in cart</span>
-                </div>
-                <ul class="cart__list">
-                    <% if (!locals.count) locals.count = 4 %>
-                    <% for (let i = 0; i < locals.count; i++) { %>
-                    <li class="cart__item">
-                        <a href="#" class="cart__item-inner">
-                            <div class="cart__item-image"><img src="img/products/test.webp" alt="image product" loading="lazy" width="100" height="100"></div>
-                            <div class="cart__item-content">
-                                <h3 class="cart__item-title">Nootropil</h3>
-                                <div class="cart__item-price">
-                                    <del class="cart__item-old-price">50 €</del>
-                                    <div class="cart__item-current-price">34.36 €</div>
-                                </div>
-                            </div>
-                            <button class="cart__item-remove"><span class="icon-close"></span></button>
-                        </a>
-                    </li>
-                    <% } %>
-                </ul>
+                <div class="cart__count"><span class="cart__count-value">4</span> <span>items in cart</span></div>
+                <%- include('../partials/cart-list.ejs', { count: 4 }) %>
                 <div class="cart__bottom">
                     <div class="cart__total"><span>Total</span><span class="cart__total-value">0</span><span>€</span></div>
                     <button class="cart__btn btn">Go to Cart</button>
@@ -67,7 +48,7 @@
                 <form class="feedback__form feedback-form form">
                     <div class="form__row">
                         <fieldset class="feedback-form__rating form__column">
-                            <legend>Rate this product</legend>
+                            <span>Rate this product</span>
                             <div class="feedback-form__stars">
                                 <input id="rate5" type="radio" name="rating" value="5" checked>
                                 <label for="rate5"><span class="icon-star-fill"></span></label>
@@ -103,11 +84,15 @@
                     </div>
                     <div class="form__row">
                         <label class="form__column">
-                            <span>Review</span>
+                            <span>Text</span>
                             <textarea placeholder="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, quasi!" name="text" required></textarea>
                         </label>
                     </div>
-                    <button>Submit</button>
+                    <div class="form__row">
+                        <div class="form__column">
+                            <button class="btn btn_prim">Submit</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>

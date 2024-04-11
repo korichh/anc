@@ -6,6 +6,8 @@
     const headerForm = document.querySelector('.header-form')
     const headerMiddle = document.querySelector('.header__middle')
     const productItem = document.querySelector('.product-item')
+    const feedbackForm = document.querySelector('.feedback-form')
+    const cookie = document.querySelector('.cookie')
     const productForms = document.querySelectorAll('.product-form')
 
     if (header && scrollTop) {
@@ -175,6 +177,51 @@
             if (aboutHeight && (checkBottom > aboutBottom)) inner.classList.add('_active')
             else inner.classList.remove('_active')
         }
+
+        function stylize(el, props = {}) {
+            el.style.cssText = ''
+            for (const prop in props) el.style[prop] = props[prop]
+        }
+    }
+
+    if (feedbackForm) {
+        feedbackForm.addEventListener('change', (e) => {
+            if (e.target.closest('.feedback-form__image')) {
+                const input = e.target.closest('.feedback-form__image input')
+                if (!inFileTypes(input)) return
+
+                const img = feedbackForm.querySelector('.feedback-form__image img')
+                img.setAttribute('src', URL.createObjectURL(input.files[0]))
+            }
+        })
+
+        function inFileTypes(input) {
+            const fileTypes = input.getAttribute('accept').split(',')
+            const ext = `.${input.files[0].name.split('.').pop().toLowerCase()}`
+            if (!fileTypes.includes(ext)) return false
+            return true
+        }
+    }
+
+    if (cookie) {
+        const cookiesKey = 'cookiesAccepted'
+        const accept = localStorage.getItem(cookiesKey)
+        const now = new Date()
+        const cookieDate = new Date(accept)
+
+        if (!accept || (cookieDate - now) <= 0) {
+            cookie.classList.add('_active')
+
+            cookie.addEventListener('click', (e) => {
+                if (e.target.closest('.cookie__btn-accept')) {
+                    const now = new Date()
+                    const endDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59)
+
+                    cookie.classList.remove('_active')
+                    localStorage.setItem(cookiesKey, endDate)
+                }
+            })
+        }
     }
 
     if (productForms && productForms.length > 0) {
@@ -185,7 +232,7 @@
         })
     }
 
-    if ('tabs') {
+    if ('tab') {
         document.addEventListener('click', (e) => {
             if (e.target.closest('.tab [data-for]')) {
                 e.preventDefault()
@@ -282,10 +329,5 @@
             .replace(/>/g, "&gt;")
             .replace(/"/g, "&quot;")
             .replace(/'/g, "&#039;");
-    }
-
-    function stylize(el, props = {}) {
-        el.style.cssText = ''
-        for (const prop in props) el.style[prop] = props[prop]
     }
 })()

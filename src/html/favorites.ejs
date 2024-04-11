@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 
-<%- include('./components/root/head.ejs', { title: 'Category' }) %>
+<%- include('./components/root/head.ejs', { title: 'Favorites' }) %>
 
 <body>
     <div class="page">
         <%- include('./components/root/header.ejs') %>
         <main class="main">
-            <%- include('./components/partials/breadcrumbs.ejs', { crumbs: ['Home', 'Category'] }) %>
-            <%- include('./components/partials/products.ejs', { page: 'category', count: 10 }) %>
+            <%- include('./components/partials/products.ejs', { page: 'favorites', count: 2 }) %>
         </main>
         <%- include('./components/root/footer.ejs') %>
         <%- include('./components/root/popup.ejs') %>

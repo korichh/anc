@@ -6,7 +6,7 @@
                     <div class="header__delivery"><span class="icon-delivery"></span><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, porro.</span></div>
                     <a href="#" class="header__location" data-popup="location|Choose the city"><span class="icon-location"></span><span>Madrid</span></a>
                     <a href="tel:+123456789" class="header__phone"><span class="icon-phone"></span><span>+1 (234) 567 89</span></a>
-                    <a href="mailto:mail@test.com" class="header__mail"><span class="icon-mail"></span><span>mail@test.com</span></a>
+                    <a href="mailto:example@gmail.com" class="header__mail"><span class="icon-mail"></span><span>example@gmail.com</span></a>
                 </div>
             </div>
         </div>
@@ -16,6 +16,7 @@
                     <button class="header__burger" data-mobile><span class="icon-burger"></span></button>
                     <div class="header__logo"><a href="/index.html"><img src="img/logo.svg" alt="logo image" loading="lazy" width="150" height="50"></a></div>
                     <button class="header__search" data-search><span class="icon-search"></span></button>
+                    <button class="header__cart" data-popup="cart|Cart"><span class="icon-cart" data-count="1"></span></button>
                 </div>
             </div>
         </div>
@@ -29,67 +30,10 @@
                                 <button class="icon-search"></button>
                                 <input name="s" type="text" placeholder="Search for...">
                             </div>
-                            <ul class="header-form__list search-list">
-                                <li class="search-list__item">
-                                    <a href="#" class="search-list__item-inner">
-                                        <div class="search-list__image"><img src="img/products/default.webp" alt="image default"></div>
-                                        <div data-title="Name:" class="search-list__name">Super Avana</div>
-                                        <div data-title="Price:" class="search-list__price">100.87</div>
-                                        <div class="search-list__button"><span>Buy</span></div>
-                                    </a>
-                                </li>
-                                <li class="search-list__item">
-                                    <a href="#" class="search-list__item-inner">
-                                        <div class="search-list__image"><img src="img/products/default.webp" alt="image default"></div>
-                                        <div data-title="Name:" class="search-list__name">Super Avana</div>
-                                        <div data-title="Price:" class="search-list__price">100.87</div>
-                                        <div class="search-list__button"><span>Buy</span></div>
-                                    </a>
-                                </li>
-                                <li class="search-list__item">
-                                    <a href="#" class="search-list__item-inner">
-                                        <div class="search-list__image"><img src="img/products/default.webp" alt="image default"></div>
-                                        <div data-title="Name:" class="search-list__name">Super Avana</div>
-                                        <div data-title="Price:" class="search-list__price">100.87</div>
-                                        <div class="search-list__button"><span>Buy</span></div>
-                                    </a>
-                                </li>
-                                <li class="search-list__item">
-                                    <a href="#" class="search-list__item-inner">
-                                        <div class="search-list__image"><img src="img/products/default.webp" alt="image default"></div>
-                                        <div data-title="Name:" class="search-list__name">Super Avana</div>
-                                        <div data-title="Price:" class="search-list__price">100.87</div>
-                                        <div class="search-list__button"><span>Buy</span></div>
-                                    </a>
-                                </li>
-                                <li class="search-list__item">
-                                    <a href="#" class="search-list__item-inner">
-                                        <div class="search-list__image"><img src="img/products/default.webp" alt="image default"></div>
-                                        <div data-title="Name:" class="search-list__name">Super Avana</div>
-                                        <div data-title="Price:" class="search-list__price">100.87</div>
-                                        <div class="search-list__button"><span>Buy</span></div>
-                                    </a>
-                                </li>
-                                <li class="search-list__item">
-                                    <a href="#" class="search-list__item-inner">
-                                        <div class="search-list__image"><img src="img/products/default.webp" alt="image default"></div>
-                                        <div data-title="Name:" class="search-list__name">Super Avana</div>
-                                        <div data-title="Price:" class="search-list__price">100.87</div>
-                                        <div class="search-list__button"><span>Buy</span></div>
-                                    </a>
-                                </li>
-                                <li class="search-list__item">
-                                    <a href="#" class="search-list__item-inner">
-                                        <div class="search-list__image"><img src="img/products/default.webp" alt="image default"></div>
-                                        <div data-title="Name:" class="search-list__name">Super Avana</div>
-                                        <div data-title="Price:" class="search-list__price">100.87</div>
-                                        <div class="search-list__button"><span>Buy</span></div>
-                                    </a>
-                                </li>
-                            </ul>
+                            <%- include('../partials/search-list.ejs', { count: 6 }) %>
                         </div>
                     </form>
-                    <a href="#" class="header__action header__saved"><span class="icon-heart" data-count="1"></span></a>
+                    <a href="/favorites.html" class="header__action header__saved"><span class="icon-heart" data-count="1"></span></a>
                     <a href="#" class="header__action header__cart" data-popup="cart|Cart"><span class="icon-cart" data-count="1"></span></a>
                 </div>
             </div>
@@ -142,10 +86,10 @@
                                 <li class="menu-item"><a href="/category.html">vitamins-supplements</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="#">Payment and guarantees</a></li>
-                        <li class="menu-item"><a href="#">About us</a></li>
-                        <li class="menu-item"><a href="#">Contacts</a></li>
-                        <li class="menu-item"><a href="#">FAQ</a></li>
+                        <li class="menu-item"><a href="/payment.html">Payment and guarantees</a></li>
+                        <li class="menu-item"><a href="/about.html">About us</a></li>
+                        <li class="menu-item"><a href="/contacts.html">Contacts</a></li>
+                        <li class="menu-item"><a href="/faq.html">FAQ</a></li>
                         <li class="menu-item"><a href="#">Blog</a></li>
                     </ul>
                 </div>
@@ -163,7 +107,7 @@
                     <ul class="menu">
                         <li class="menu-item" data-popup="location|Choose the city"><a href="#"><span class="icon-location"></span><span>Location</span><span class="icon-arrow"></span></a></li>
                         <li class="menu-item" data-popup="cart|Cart"><a href="#"><span class="icon-cart"></span><span>Cart</span><span class="icon-arrow"></span></a></li>
-                        <li class="menu-item"><a href="#"><span class="icon-heart"></span><span>Saved</span></a></li>
+                        <li class="menu-item"><a href="/favorites.html"><span class="icon-heart"></span><span>Saved</span></a></li>
                     </ul>
                     <ul class="menu">
                         <li class="menu-item">
@@ -215,10 +159,10 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="menu-item"><a href="#"><span class="icon-payment"></span><span>Payment and guarantees</span></a></li>
-                        <li class="menu-item"><a href="#"><span class="icon-about"></span><span>About us</span></a></li>
-                        <li class="menu-item"><a href="#"><span class="icon-mail"></span><span>Contacts</span></a></li>
-                        <li class="menu-item"><a href="#"><span class="icon-faq"></span><span>FAQ</span></a></li>
+                        <li class="menu-item"><a href="/payment.html"><span class="icon-payment"></span><span>Payment and guarantees</span></a></li>
+                        <li class="menu-item"><a href="/about.html"><span class="icon-about"></span><span>About us</span></a></li>
+                        <li class="menu-item"><a href="/contacts.html"><span class="icon-mail"></span><span>Contacts</span></a></li>
+                        <li class="menu-item"><a href="/faq.html"><span class="icon-faq"></span><span>FAQ</span></a></li>
                         <li class="menu-item"><a href="#"><span class="icon-blog"></span><span>Blog</span></a></li>
                         <li class="menu-item">
                             <a href="#"><span class="icon-info"></span><span>Info</span><span class="icon-arrow"></span></a>

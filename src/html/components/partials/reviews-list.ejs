@@ -1,6 +1,5 @@
 <ul class="reviews-list">
-    <% if (!locals.count) locals.count = 6 %>
-    <% for (let i = 0; i < locals.count; i++) { %>
+    <% for (let i = 0; i < count; i++) { %>
     <li class="reviews-list__item review-card" itemscope="" itemtype="https://schema.org/Review">
         <meta itemprop="datePublished" content="2024-04-05">
         <meta itemprop="itemreviewed" itemscope="" itemtype="https://schema.org/Organization">
@@ -19,9 +18,9 @@
                         <span class="icon-star-fill"></span>
                     </div>
                 </div>
+                <div class="review-card__date">2024-04-04 17:53:31</div>
             </div>
             <div class="review-card__bottom" itemprop="reviewBody">
-                <h3>Lorem ipsum dolor sit amet.</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi odit animi saepe magni aspernatur! Quo voluptatum aut tempore harum deserunt doloribus, distinctio nemo amet ea? Minima fugiat illum dolorem ipsum.</p>
             </div>
         </div>
