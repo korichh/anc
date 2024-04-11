@@ -74,18 +74,18 @@
         document.addEventListener('click', (e) => {
             if (e.target.closest('.header-form__search')) {
                 headerForm.classList.add('_active')
-                document.querySelector('.blur').classList.add('_active')
+                document.querySelector('.overlay').classList.add('_active')
             } else if (headerForm.classList.contains('_active') && !e.target.closest('.header-form')) {
                 headerMiddle.classList.remove('_active')
                 headerForm.classList.remove('_active')
-                document.querySelector('.blur').classList.remove('_active')
+                document.querySelector('.overlay').classList.remove('_active')
             }
 
             if (e.target.closest('[data-search]')) {
                 headerMiddle.classList.add('_active')
                 headerMiddle.querySelector('.header-form__search input').focus()
                 headerForm.classList.add('_active')
-                document.querySelector('.blur').classList.add('_active')
+                document.querySelector('.overlay').classList.add('_active')
             }
         })
 

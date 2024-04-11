@@ -508,16 +508,13 @@ body {
     padding: 0 15px;
 }
 
-.blur {
+.overlay {
     position: fixed;
     z-index: 2;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    -webkit-backdrop-filter: blur(0);
-    backdrop-filter: blur(0);
-    background: rgba(0, 0, 0, 0);
     visibility: hidden;
     -webkit-transition: background-color 0.3s ease, visibility 0s ease 0.3s, -webkit-backdrop-filter 0.3s ease;
     transition: background-color 0.3s ease, visibility 0s ease 0.3s, -webkit-backdrop-filter 0.3s ease;
@@ -525,12 +522,10 @@ body {
     transition: backdrop-filter 0.3s ease, background-color 0.3s ease, visibility 0s ease 0.3s, -webkit-backdrop-filter 0.3s ease;
 }
 
-.blur._active {
+.overlay._active {
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.2);
     visibility: visible;
 }
 
