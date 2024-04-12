@@ -8,6 +8,7 @@
     const productItem = document.querySelector('.product-item')
     const feedbackForm = document.querySelector('.feedback-form')
     const cookie = document.querySelector('.cookie')
+    const subscribe = document.querySelector('.subscribe')
     const productForms = document.querySelectorAll('.product-form')
 
     if (header && scrollTop) {
@@ -224,6 +225,17 @@
         }
     }
 
+    if (subscribe) {
+        subscribe.addEventListener('submit', (e) => {
+            if (e.target.closest('.subscribe__form')) {
+                e.preventDefault()
+                setTimeout(() => {
+                    e.target.closest('.subscribe__form').classList.add('_active')
+                }, 300);
+            }
+        })
+    }
+
     if (productForms && productForms.length > 0) {
         productForms.forEach(form => {
             form.addEventListener('submit', (e) => {
@@ -333,3 +345,13 @@
             .replace(/'/g, "&#039;");
     }
 })()
+
+// document.addEventListener('click', (e) => {
+//     if (e.target.closest('a')) {
+//         const href = e.target.closest('a').getAttribute('href')
+//         if (href.includes('#')) return
+
+//         e.preventDefault()
+//         window.location.href = '/anc' + href
+//     }
+// })
