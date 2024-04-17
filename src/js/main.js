@@ -344,12 +344,12 @@
     }
 })()
 
-// document.addEventListener('click', (e) => {
-//     if (e.target.closest('a')) {
-//         const href = e.target.closest('a').getAttribute('href')
-//         if (href.includes('#')) return
+document.addEventListener('click', (e) => {
+    if (e.target.closest('a')) {
+        const href = e.target.closest('a').getAttribute('href')
+        if (href.includes('#')) return
 
-//         e.preventDefault()
-//         window.location.href = '/anc' + href
-//     }
-// })
+        e.preventDefault()
+        window.location.href = '/anc' + href
+    }
+})
