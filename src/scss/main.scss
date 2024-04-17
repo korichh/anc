@@ -4442,3 +4442,101 @@ section.content {
         }
     }
 }
+
+.categories {
+    padding: 60px 0;
+    &__content {
+        margin-bottom: 30px;
+    }
+    &__inner {
+        display: block;
+    }
+}
+.categories-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: -10px;
+    &__item {
+        width: 33.333%;
+    }
+}
+.categories-card {
+    &__inner {
+        text-decoration: none;
+        color: #000;
+        padding: 15px;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        border: 1px solid #eaeaea;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.06);
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+        &:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+    }
+    &__icon {
+        margin-right: 10px;
+        min-width: 65px;
+        min-height: 65px;
+        max-width: 65px;
+        max-height: 65px;
+        border-radius: 100%;
+        background: rgba(0, 0, 0, 0.05);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition:
+            background-color 0.3s ease,
+            color 0.3s ease;
+        [class^="icon-"] {
+            display: block;
+            font-size: 35px;
+        }
+    }
+    &__inner:hover &__icon {
+        background: #15a9e3;
+        color: #fff;
+    }
+    &__content {
+        display: block;
+    }
+    &__title {
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 2px;
+        transition: color 0.3s ease;
+    }
+    &__descr {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+}
+@media (max-width: 991.98px) {
+    .categories {
+        padding: 40px 0;
+        &__content {
+            margin-bottom: 20px;
+        }
+    }
+    .categories-list {
+        &__item {
+            width: 50%;
+        }
+    }
+}
+@media (max-width: 767.98px) {
+    .categories {
+        padding: 30px 0;
+    }
+}
+@media (max-width: 649.98px) {
+    .categories-list {
+        &__item {
+            width: 100%;
+        }
+    }
+}
